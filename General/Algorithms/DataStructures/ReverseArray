@@ -1,0 +1,28 @@
+# Reverse Array
+
+The best way to reverse an array is using an in-place implementation. Meaning that you get a reference to the array and directly edit it for your reverse operations.
+
+## Java Implementation
+
+```java
+void reverseArr(int arr[]) {
+    int in = 0;
+    int inl = arr.length - 1;
+    while(in < inl) {
+        int copy = arr[in];
+        arr[in] = arr[inl];
+        arr[inl] = copy;
+    }
+}
+```
+
+## C++ Implementation
+
+```c++
+void reverseArr(vector<int> & arr) {
+    
+}
+```
+
+
+

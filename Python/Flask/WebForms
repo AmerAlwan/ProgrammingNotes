@@ -1,0 +1,86 @@
+# Webforms using WTForms & Flask-WTF
+
+Web forms allow us to accept input from the user for things like submitting blog posts, or logging in.
+
+Flask-WTF is a thin wrapper around the WTForms package, both of which provide solutions to problems with Flask.
+
+## Defining Forms
+
+The WTForms plugin uses Python classes to represent web forms. A form class simply defines the fields of the form as class variables
+
+To define a form, a class is created which inherits the `Form` class of WTForms. 
+
+```python
+from WTForms import Form, StringField
+
+class MyForm(Form):
+    first_name = StringField("First Name", validators=[validators.input_required()])
+    last_name = StringField("Last Name", validators=[validators.optional()])
+```
+
+### Form Inheritance
+
+Form subclasses may inherit from other subclass forms. The new form will contain all fields of the parent form as well as any new fields defined in the subclass.
+
+Any field names that are reused will override the field name in the original
+
+```python
+class GetName(Form):
+    name = StringField("Name", validators=[validators.optional()])
+class GetPass(GetName):
+    password = PasswordField("Password", validators=[validators.input_required()])
+```
+
+### In-Line Validators
+
+Say that you want to have a certain validation for a specific field. Instead of making a custom validation which is going to be used once, you can create a method in the form class which has the the naming convention `validate_fieldname`
+
+```python
+class MyForm(Form):
+    age = IntegerField("Age")
+    def validate_age(form, field):
+        if field.data < 13:
+            raise ValidationError("Must be 13 or older to register")
+```
+
+## Using and Receiving Form Data
+
+Firstly, any method with `app.route()` which will declare must have `methods=['GET', 'POST']` in its parameters since GET is the default method of a route
+
+Then, an object instance of the custom Form class is made.
+
+```python
+@app.route('/login', methods=['GET', 'POST'])
+def login():
+    form = MyForm()
+```
+
+Secondly, an if statement is used to check if the request to the server was a POST request and then validate it, there are two ways to do this depending on the plugin used.
+
+#### With WTForms
+
+```python
+if request.method == 'POST' and form.validate():
+```
+
+Ensure that the form validation is made after ensuring that the request method is POST or there could be validation errors.
+
+#### With Flask-WTF
+
+```python
+if form.validate_on_submit():
+```
+
+## Fields
+
+Fields are responsible for rendering and data conversion while using validators for data validation
+
+```python
+class MyForm(Form):
+    name = StringField('Full Name', [validators.required(), validators.length(max=10)])
+    address = TextAreaField('Mailing Address', [validators.optional(), validators.length(max=200)])
+```
+
+When a field is defined in a form, the construction parameters are saved until the form in instantiated. 
+
+When a form is instantiated, a copy of the field is made with all the parameters specified in the definition. Each instance of the field keeps its own field data and errors list.

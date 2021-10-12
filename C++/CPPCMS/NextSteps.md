@@ -1,0 +1,3 @@
+* Try and implement the JSON RPC Chat server. If you want, you can continue from where I left off in the code or just start over
+* Try and organize the templates. See if you can implement multiple template inheritance where you have basically have a master template which has the head and body of html, then have another template content which inherits from master and includes header content and page content. Then, all other templates will inherit from content and will include either header or page content
+* Try and figure out how to include local css and js files in the templates

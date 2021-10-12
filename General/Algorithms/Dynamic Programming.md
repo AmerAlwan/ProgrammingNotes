@@ -1,0 +1,3 @@
+# Dynamic Programming
+
+Dynamic programming involves the break down o a complex problem into simpler subproblems, solving each of those subproblems at once, and storing their solutions using a data structure. If that sub problem occurs again, you can retrieve its solution instead of recomputing it. If you have to make a calculation more than once, then `memoiosize` the results, which means saving them.
