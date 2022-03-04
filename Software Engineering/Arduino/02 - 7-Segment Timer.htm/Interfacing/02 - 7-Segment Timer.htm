@@ -1,0 +1,87 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<head lang="en">
+<link href="TemplateFiles/stylesheet.css" type="text/css" rel="stylesheet" />
+<meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+<title>Sample Content Topic</title>
+</head>
+<body>
+<div id="container">
+<div id="decorative">&nbsp;&nbsp;</div>
+<div id="header">
+<div class="courseTitle">TEJ 3MI Grade&nbsp;11 Computer Engineering Technology</div>
+<h1 class="header">interfacing</h1>
+<h2 class="header">7-Segment timer</h2>
+</div>
+<div id="footnotes">
+<pre><a href="BasicElectronics.odp" target="_blank" rel="noopener noreferrer"></a></pre>
+<p><span size="3" style="font-size: medium;">Now that you know how to send a signal to a single LED, you also know how to send a signal to the pins on a 7-segment display.</span></p>
+<p><span size="3" style="font-size: medium;"><img src="../Logic%20and%20Electronics/pics/7sgdefc.jpg" alt="" title="" style="max-width: 100%;" data-d2l-editor-default-img-style="true" /></span></p>
+<h2><span size="3" style="font-size: 14pt; font-family: verdana, sans-serif;">Wiring</span></h2>
+<p><span size="3" style="font-size: medium;">You will need an Arduino, a 7-segment display, two 220&Omega; resistors, jumper wires.</span></p>
+<ol>
+<li><span style="font-size: medium;">Connect one jumper wire to the ground port on the Arduino and the other end of the wire to the ground terminal on the breadboard.</span></li>
+<li><span style="font-size: medium;">Connect one jumper wire to the 5V port on the Arduino and the other end of the wire to the power terminal on the breadboard.</span></li>
+<li><span style="font-size: medium;">Use resistors to connect the power terminal on the breadboard to pins 3 &amp; 11 on the 7-segment display</span></li>
+<li><span style="font-size: medium;">Connect pin 2 on the Arduino to pin 1 on the 7-segment display</span></li>
+<li><span style="font-size: medium;">Connect pin 3 on the Arduino to pin 2 on the 7-segment display</span></li>
+<li><span style="font-size: medium;">Connect pin 4 on the Arduino to pin 5 on the 7-segment display</span></li>
+<li><span style="font-size: medium;">Connect pin 5 on the Arduino to pin 6 on the 7-segment display</span></li>
+<li><span style="font-size: medium;">Connect pin 6 on the Arduino to pin 8 on the 7-segment display</span></li>
+<li><span style="font-size: medium;">Connect pin 7 on the Arduino to pin 9 on the 7-segment display</span></li>
+<li><span style="font-size: medium;">Connect pin 8 on the Arduino to pin 10 on the 7-segment display</span></li>
+</ol>
+<h2><span size="3" style="font-size: 18pt;">Programming</span></h2>
+<ol>
+<li><span style="font-size: 12pt;">Open a new sketch</span></li>
+<li><span style="font-size: 12pt;">In the Void Setup method set your pins (i.e. <span style="color: #ff9900;">pinMode (2, OUTPUT);</span>)</span></li>
+<li><span style="font-size: 12pt;">In the Void Setup method set all of your pins output to high (i.e. <span style="color: #ff9900;">digitalWrite (2, HIGH);</span>)</span></li>
+<li><span style="font-size: 12pt;">In the Void Loop method create digital writes for each number with a delay between each:</span></li>
+<ul>
+<li><span style="font-size: 12pt;">For the number 1:</span></li>
+</ul>
+<ol>
+<ul>
+<li><span style="color: #ff9900;"><span style="font-size: 12pt;">digitalWrite (8, </span><span style="font-size: 12pt;">LOW</span><span style="font-size: 12pt;">);</span></span></li>
+<li><span style="color: #ff9900;"><span style="font-size: 12pt;">digitalWrite (6, </span><span style="font-size: 12pt;">LOW</span><span style="font-size: 12pt;">);</span></span></li>
+<li><span style="font-size: 12pt; color: #ff9900;">delay (1000);</span></li>
+<li><span style="color: #ff9900;"><span style="font-size: 12pt;">digitalWrite (8, </span><span style="font-size: 12pt;">HIGH</span><span style="font-size: 12pt;">);</span></span></li>
+<li><span style="font-size: 12pt; color: #ff9900;">digitalWrite (6, HIGH);</span></li>
+</ul>
+</ol>
+<li><span style="font-size: 12pt;">Once you have finished setting all of the combinations in order to display numbers 0-9 verify your program</span></li>
+<li><span style="font-size: 12pt;">Once your code is verified, Upload your program.</span></li>
+</ol>
+<p><span size="3" style="font-size: medium;"><span><span><span><span><span><span></span></span></span></span></span></span></span></p>
+<h2><span size="3" style="font-size: 18pt;">Advanced Timer</span></h2>
+<p><span size="3" style="font-size: medium;"><span><span><span><span><span><span>You can also use the Arduino to control a Dual 7-Segment display. It works the exact same way for programming, the wiring is just a little difference.</span></span></span></span></span></span></span></p>
+<ol>
+<li><span style="font-size: 12pt;">Connect one jumper wire to the 5V port on the Arduino and the other end of the wire to the power terminal on the breadboard.</span></li>
+<li><span style="font-size: 12pt;">Connect Pin 2 on the Arduino to Pin 1 on the Display.</span></li>
+<li><span style="font-size: 12pt;">Connect Pin 3 on the Arduino to Pin 2 on the Display.</span></li>
+<li><span style="font-size: 12pt;">Connect Pin 4 on the Arduino to Pin 3 on the Display.</span></li>
+<li><span style="font-size: 12pt;">Connect Pin 5 on the Arduino to Pin 4 on the Display.</span></li>
+<li><span style="font-size: 12pt;">Connect Pin 6 on the Arduino to Pin 5 on the Display.</span></li>
+<li><span style="font-size: 12pt;">Connect Pin 7 on the Arduino to Pin 6 on the Display.</span></li>
+<li><span style="font-size: 12pt;">Connect Pin 8 on the Arduino to Pin 7 on the Display.</span></li>
+<li><span style="font-size: 12pt;">Connect Pin 9 on the Arduino to Pin 8 on the Display.</span></li>
+<li><span style="font-size: 12pt;">Connect Pin 10 on the Arduino to Pin 9 on the Display.</span></li>
+<li><span style="font-size: 12pt;">Connect Pin 11 on the Arduino to Pin 10 on the Display.</span></li>
+<li><span style="font-size: 12pt;">Connect Pin 12 on the Arduino to Pin 11 on the Display.</span></li>
+<li><span style="font-size: 12pt;">Connect a resistor to Pin 12 on the Display.</span></li>
+<li><span style="font-size: 12pt;">Connect a resistor to Pin 13 on the Display.</span></li>
+<li><span style="font-size: 12pt;">Connect Pin A1 on the Arduino to Pin 14 on the Display.</span></li>
+<li><span style="font-size: 12pt;">Connect Pin A2 on the Arduino to Pin 15 on the Display.</span></li>
+<li><span style="font-size: 12pt;">Connect Pin A3 on the Arduino to Pin 16 on the Display.</span></li>
+<li><span style="font-size: 12pt;">Connect Pin A4 on the Arduino to Pin 17 on the Display.</span></li>
+<li><span style="font-size: 12pt;">Connect Pin A5 on the Arduino to Pin 18 on the Display.</span></li>
+</ol>
+<p><span size="3" style="font-size: medium;"><span><span><span><span><span><span></span></span></span></span></span></span></span></p>
+<p><span size="3" style="font-size: medium;"><span><span><span><span><span><span></span></span></span></span></span></span></span></p>
+<p><span size="3" style="font-size: medium;"><span><span><span><span><span><span></span></span></span></span></span></span></span></p>
+<p></p>
+<p><span lang="EN"><span lang="EN"><a href="Combinational%20Logic.pdf" target="_blank" rel="noopener noreferrer">&nbsp;</a></span></span></p>
+</div>
+</div>
+</body>
+</html>

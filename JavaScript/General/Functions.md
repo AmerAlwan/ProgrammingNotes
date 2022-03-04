@@ -174,7 +174,7 @@ function concatinate(seperator) {
     }
     return result;
 }
-concatinate(','. 'red', 'orange', 'blue'); // red, orange, blue,
+concatinate(',', 'red', 'orange', 'blue'); // red, orange, blue,
 ```
 
 ## Arrow Functions
@@ -211,7 +211,7 @@ a => a + 100;
 // Multiline Traditional Function
 function (a, b) {
     let c = 10;
-    return a + b + c'
+    return a + b + c;
 }
 
 // Multiline Arrow Function
@@ -236,7 +236,6 @@ Returning object literal expressions requires parentheses around expression
 ```javascript
 params => ({foo: 1})
 ```
-
 
 
 

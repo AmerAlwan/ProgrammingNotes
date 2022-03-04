@@ -1,0 +1,59 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<head lang="en">
+<link href="TemplateFiles/stylesheet.css" type="text/css" rel="stylesheet" />
+<meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+<title>Sample Content Topic</title>
+</head>
+<body>
+<div id="container">
+<div id="decorative">&nbsp;&nbsp;</div>
+<div id="header">
+<div class="courseTitle">TEJ 3MI Grade&nbsp;11 Computer Engineering Technology</div>
+<h1 class="header">interfacing</h1>
+<h2 class="header">photoresistor</h2>
+</div>
+<div id="footnotes">
+<pre><a href="BasicElectronics.odp" target="_blank" rel="noopener noreferrer"></a></pre>
+<div class="page" title="Page 43">
+<div class="layoutArea">
+<div class="column">
+<p><span style="font-size: 12pt;">So you&rsquo;ve already played with a potentiometer, which varies resistance based on the twisting of a knob. In this circuit, you&rsquo;ll be using a photo resistor, which changes resistance based on how much light the sensor receives. Since the Arduino&nbsp;can&rsquo;t directly interpret resistance (rather, it reads voltage), we use a voltage divider to use our photo resistor. This voltage divider will output a high voltage when it is getting a lot of light and a low voltage when it is not.&nbsp;</span></p>
+</div>
+</div>
+</div>
+<h2>Wiring Setup</h2>
+<p><span style="font-size: 12pt;">Connect one side of the photoresistor to 5 Volts (5V).</span></p>
+<p><span style="font-size: 12pt;">Connect the other side of the photoresistor to ANALOG pin 0.</span></p>
+<p><span style="font-size: 12pt;">Connect a 10K resistor between ANALOG pin 0 and GND.</span></p>
+<p><span style="font-size: 12pt;">This creates a voltage divider, with the photoresistor one&nbsp;of the two resistors. The output of the voltage divider&nbsp;(connected to A0) will vary with the light level.</span></p>
+<p><span style="font-size: 12pt;">Connect the positive side (long leg) of the LED to&nbsp;digital pin 9. (To vary the brightness, this pin must&nbsp;support PWM, which is indicated by "~" or "PWM" on the&nbsp;Arduino itself.)</span></p>
+<p><span style="font-size: 12pt;">Connect the negative side of the LED (short leg) to a&nbsp;330 Ohm resistor.</span></p>
+<p><span style="font-size: 12pt;">Connect the other side of the resistor to GND.</span></p>
+<p><span style="font-size: 12pt;"></span></p>
+<p><span style="font-size: 12pt;"><img src="pics/photo%20resistor%20circuit.png" alt="" title="" style="max-width: 100%; display: block; margin-left: auto; margin-right: auto;" data-d2l-editor-default-img-style="true" /></span></p>
+<p style="text-align: center;"></p>
+<h2>Programming</h2>
+<p><span style="font-size: 12pt;">Copy the program below into the Sketch program.</span></p>
+<p><img src="pics/Photo%20Program%201.gif" alt="" title="" width="628" height="632" /></p>
+<p><img src="pics/Photo%20Program%202.gif" alt="" title="" width="630" height="333" /></p>
+<p><img src="pics/Photo%20Explain.gif" alt="" title="" width="678" height="292" /></p>
+<h2>Exercises</h2>
+<div class="page" title="Page 24">
+<div class="layoutArea">
+<div class="column">
+<ol>
+<li><span style="font-size: 12pt;">Reverse the LED output so that the LED gets dimmer as the sensor gets more light and the LED gets brighter when the sensor gets less light.</span></li>
+<li>
+<p><span style="font-size: 12pt;">Change the range of light that the resistor will react to.</span></p>
+</li>
+</ol>
+</div>
+</div>
+</div>
+<p><span lang="EN"><span lang="EN"><a href="Combinational%20Logic.pdf" target="_blank" rel="noopener noreferrer">&nbsp;</a></span></span></p>
+</div>
+</div>
+<p></p>
+</body>
+</html>

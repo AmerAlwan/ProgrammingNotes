@@ -1,0 +1,45 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<head lang="en">
+<link href="TemplateFiles/stylesheet.css" type="text/css" rel="stylesheet" />
+<meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+<title>Sample Content Topic</title>
+</head>
+<body>
+<div id="container">
+<div id="decorative">&nbsp;&nbsp;</div>
+<div id="header">
+<div class="courseTitle">TEJ 3MI Grade&nbsp;11 Computer Engineering Technology</div>
+<h1 class="header">interfacing</h1>
+<h2 class="header">push buttons</h2>
+</div>
+<div id="footnotes">
+<pre><a href="BasicElectronics.odp" target="_blank"></a></pre>
+<p><span style="font-size: 12pt;"><span lang="EN"><span lang="EN">Up to this point the focus has been on output. I</span></span>n this circuit, we&rsquo;ll be looking at one of the most common and simple inputs &ndash; a push button. e way a push button works with RedBoard is that when the button is pushed, the voltage goes LOW. e RedBoard reads this and reacts accordingly. In this circuit, you will also use a pull-up resistor, which keeps the voltage HIGH when you're not pressing the button.&nbsp;</span></p>
+<h2>Wiring Setup</h2>
+<p><span style="font-size: 12pt;">Pushbuttons have two contacts that are connected if you're</span>&nbsp;<span style="font-size: 12pt;">pushing the button, and disconnected if you're not.</span><br /> <br /><span style="font-size: 12pt;"> The pushbuttons we're using have four pins, but two pairs</span>&nbsp;<span style="font-size: 12pt;">of these are connected together. The easiest way to hook up</span>&nbsp;<span style="font-size: 12pt;">the pushbutton is to connect two wires to any opposite corners.</span></p>
+<p><span style="font-size: 12pt;">Connect any pin on pushbutton 1 to ground (GND).</span><br /><span style="font-size: 12pt;"> Connect the opposite diagonal pin of the pushbutton to</span>&nbsp;<span style="font-size: 12pt;">digital pin 2.</span></p>
+<p><span style="font-size: 12pt;">Connect any pin on pushbutton 2 to ground (GND).</span><br /><span style="font-size: 12pt;"> Connect the opposite diagonal pin of the pushbutton to</span>&nbsp;<span style="font-size: 12pt;">digital pin 3.</span></p>
+<p><span style="font-size: 12pt;">Also connect 10K resistors (brown/black/red) between</span>&nbsp;<span style="font-size: 12pt;">digital pins 2 and 3 and GND. These are called "pullup"</span>&nbsp;<span style="font-size: 12pt;">resistors. They ensure that the input pin will be either</span>&nbsp;<span style="font-size: 12pt;">5V (unpushed) or GND (pushed), and not somewhere in between.</span><br /><span style="font-size: 12pt;"> (Remember that unlike analog inputs, digital inputs are only</span>&nbsp;<span style="font-size: 12pt;">HIGH or LOW.)</span></p>
+<p><img src="pics/Button%20Wiring.gif" alt="" title="" /></p>
+<h2>Programming</h2>
+<p><span style="font-size: 12pt;">Copy the program below into the Sketch program.</span></p>
+<p><img src="pics/Button%20Program%201.gif" alt="" title="" width="634" height="270" /></p>
+<p><img src="pics/Button%20Program%202.gif" alt="" title="" width="638" height="303" /></p>
+<p><img src="pics/Button%20Explained.gif" alt="" title="" width="637" height="270" /></p>
+<h2>Exercises</h2>
+<div class="page" title="Page 24">
+<div class="layoutArea">
+<div class="column"><ol>
+<li>
+<p><span size="3" style="font-size: medium;">Setup a program with two buttons and an LED. Have one button speed up the blink speed of the&nbsp;LED and one button slow down the blink speed of the LED.</span></p>
+</li>
+<li><span size="3" style="font-size: medium;">Setup a program with two buttons and a RGB LED. Have one button cause the colours to change in the positive direction and have one button cause the colours to change in the negative direction.</span></li>
+</ol></div>
+</div>
+</div>
+<p><span lang="EN"><span lang="EN"><a href="Combinational%20Logic.pdf" target="_blank">&nbsp;</a></span></span></p>
+</div>
+</div>
+</body>
+</html>

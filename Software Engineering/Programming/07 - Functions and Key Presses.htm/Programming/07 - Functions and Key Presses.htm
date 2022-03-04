@@ -1,0 +1,643 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<head lang="en">
+<link href="TemplateFiles/stylesheet.css" type="text/css" rel="stylesheet" />
+<meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+<title>Sample Content Topic</title>
+</head>
+<body>
+<div id="container">
+<div id="decorative">&nbsp;&nbsp;</div>
+<div id="header">
+<div class="courseTitle">TEJ 3MI Grade&nbsp;11 Computer Engineering Technology</div>
+<h1 class="header">software engineering and game design</h1>
+<div id="d_content_r_c1">
+<div id="d_content_r_c2">
+<div id="d_content_r">
+<div id="d_content_r_p"><form method="post" action="https://wcdsb.elearningontario.ca/d2l/lms/quizzing/user/attempt/quiz_attempt_page.d2l?ou=8475732&amp;isprv=1&amp;drc=0&amp;impcf=&amp;pg=1&amp;qi=2550465&amp;ai=3734140&amp;dnb=0&amp;cfql=0&amp;d2l_body_type=1" id="d2l_form" enctype="multipart/form-data">
+<h2>button presses</h2>
+<p><span style="color: #000000; font-size: 12pt;">Up to this point we have relied on using UI elements in Unity (namely the button) to execute commands in our programs. Now we want to turn our attention to using the keyboard as a form of input. Completing this task is actually fairly easy assuming that you have been able to keep up with the content to this point. The one key difference that is of importance is that we will finally be utilizing the function Update().</span></p>
+<p><span style="color: #000000; font-size: 12pt;">The functionality of the command to recognize a key press is something that will need to be added to an if statement. Remember, that a decision needs to be made, it is not a simple execution of code.</span></p>
+<p><span style="color: #000000; font-size: 12pt;"><img src="pics1/KeyPressDefault.PNG" alt="" title="" width="432" height="166" /></span></p>
+<p><span style="color: #000000; font-size: 12pt;">However, unlike what you might think from a logical perspective, for the use of key presses we generally do not use the else if statement. This is because we do not want to tie a decision about any one key to another key. Each key should be viewed as independent and therefor the if statement should be by itself.</span></p>
+<p><span style="color: #000000; font-size: 12pt;"><img src="pics1/KeyPressIf.PNG" alt="" title="" width="464" height="297" /></span></p>
+<p><span style="color: #000000; font-size: 12pt;">Below is a list of the terms used for possible key (and mouse) presses. Note that it will prompt you as you enter the code.</span></p>
+<table>
+<tbody>
+<tr>
+<td><span style="color: #000000;"><a href="https://docs.unity3d.com/ScriptReference/KeyCode.None.html" style="color: #000000;">None</a></span></td>
+<td><span style="color: #000000;">Not assigned (never returned as the result of a keystroke).</span></td>
+</tr>
+<tr>
+<td><span style="color: #000000;"><a href="https://docs.unity3d.com/ScriptReference/KeyCode.Backspace.html" style="color: #000000;">Backspace</a></span></td>
+<td><span style="color: #000000;">The backspace key.</span></td>
+</tr>
+<tr>
+<td><span style="color: #000000;"><a href="https://docs.unity3d.com/ScriptReference/KeyCode.Delete.html" style="color: #000000;">Delete</a></span></td>
+<td><span style="color: #000000;">The forward delete key.</span></td>
+</tr>
+<tr>
+<td><span style="color: #000000;"><a href="https://docs.unity3d.com/ScriptReference/KeyCode.Tab.html" style="color: #000000;">Tab</a></span></td>
+<td><span style="color: #000000;">The tab key.</span></td>
+</tr>
+<tr>
+<td><span style="color: #000000;"><a href="https://docs.unity3d.com/ScriptReference/KeyCode.Clear.html" style="color: #000000;">Clear</a></span></td>
+<td><span style="color: #000000;">The Clear key.</span></td>
+</tr>
+<tr>
+<td><span style="color: #000000;"><a href="https://docs.unity3d.com/ScriptReference/KeyCode.Return.html" style="color: #000000;">Return</a></span></td>
+<td><span style="color: #000000;">Return key.</span></td>
+</tr>
+<tr>
+<td><span style="color: #000000;"><a href="https://docs.unity3d.com/ScriptReference/KeyCode.Pause.html" style="color: #000000;">Pause</a></span></td>
+<td><span style="color: #000000;">Pause on PC machines.</span></td>
+</tr>
+<tr>
+<td><span style="color: #000000;"><a href="https://docs.unity3d.com/ScriptReference/KeyCode.Escape.html" style="color: #000000;">Escape</a></span></td>
+<td><span style="color: #000000;">Escape key.</span></td>
+</tr>
+<tr>
+<td><span style="color: #000000;"><a href="https://docs.unity3d.com/ScriptReference/KeyCode.Space.html" style="color: #000000;">Space</a></span></td>
+<td><span style="color: #000000;">Space key.</span></td>
+</tr>
+<tr>
+<td><span style="color: #000000;"><a href="https://docs.unity3d.com/ScriptReference/KeyCode.Keypad0.html" style="color: #000000;">Keypad0</a></span></td>
+<td><span style="color: #000000;">Numeric keypad 0.</span></td>
+</tr>
+<tr>
+<td><span style="color: #000000;"><a href="https://docs.unity3d.com/ScriptReference/KeyCode.Keypad1.html" style="color: #000000;">Keypad1</a></span></td>
+<td><span style="color: #000000;">Numeric keypad 1.</span></td>
+</tr>
+<tr>
+<td><span style="color: #000000;"><a href="https://docs.unity3d.com/ScriptReference/KeyCode.Keypad2.html" style="color: #000000;">Keypad2</a></span></td>
+<td><span style="color: #000000;">Numeric keypad 2.</span></td>
+</tr>
+<tr>
+<td><span style="color: #000000;"><a href="https://docs.unity3d.com/ScriptReference/KeyCode.Keypad3.html" style="color: #000000;">Keypad3</a></span></td>
+<td><span style="color: #000000;">Numeric keypad 3.</span></td>
+</tr>
+<tr>
+<td><span style="color: #000000;"><a href="https://docs.unity3d.com/ScriptReference/KeyCode.Keypad4.html" style="color: #000000;">Keypad4</a></span></td>
+<td><span style="color: #000000;">Numeric keypad 4.</span></td>
+</tr>
+<tr>
+<td><span style="color: #000000;"><a href="https://docs.unity3d.com/ScriptReference/KeyCode.Keypad5.html" style="color: #000000;">Keypad5</a></span></td>
+<td><span style="color: #000000;">Numeric keypad 5.</span></td>
+</tr>
+<tr>
+<td><span style="color: #000000;"><a href="https://docs.unity3d.com/ScriptReference/KeyCode.Keypad6.html" style="color: #000000;">Keypad6</a></span></td>
+<td><span style="color: #000000;">Numeric keypad 6.</span></td>
+</tr>
+<tr>
+<td><span style="color: #000000;"><a href="https://docs.unity3d.com/ScriptReference/KeyCode.Keypad7.html" style="color: #000000;">Keypad7</a></span></td>
+<td><span style="color: #000000;">Numeric keypad 7.</span></td>
+</tr>
+<tr>
+<td><span style="color: #000000;"><a href="https://docs.unity3d.com/ScriptReference/KeyCode.Keypad8.html" style="color: #000000;">Keypad8</a></span></td>
+<td><span style="color: #000000;">Numeric keypad 8.</span></td>
+</tr>
+<tr>
+<td><span style="color: #000000;"><a href="https://docs.unity3d.com/ScriptReference/KeyCode.Keypad9.html" style="color: #000000;">Keypad9</a></span></td>
+<td><span style="color: #000000;">Numeric keypad 9.</span></td>
+</tr>
+<tr>
+<td><span style="color: #000000;"><a href="https://docs.unity3d.com/ScriptReference/KeyCode.KeypadPeriod.html" style="color: #000000;">KeypadPeriod</a></span></td>
+<td><span style="color: #000000;">Numeric keypad '.'.</span></td>
+</tr>
+<tr>
+<td><span style="color: #000000;"><a href="https://docs.unity3d.com/ScriptReference/KeyCode.KeypadDivide.html" style="color: #000000;">KeypadDivide</a></span></td>
+<td><span style="color: #000000;">Numeric keypad '/'.</span></td>
+</tr>
+<tr>
+<td><span style="color: #000000;"><a href="https://docs.unity3d.com/ScriptReference/KeyCode.KeypadMultiply.html" style="color: #000000;">KeypadMultiply</a></span></td>
+<td><span style="color: #000000;">Numeric keypad '*'.</span></td>
+</tr>
+<tr>
+<td><span style="color: #000000;"><a href="https://docs.unity3d.com/ScriptReference/KeyCode.KeypadMinus.html" style="color: #000000;">KeypadMinus</a></span></td>
+<td><span style="color: #000000;">Numeric keypad '-'.</span></td>
+</tr>
+<tr>
+<td><span style="color: #000000;"><a href="https://docs.unity3d.com/ScriptReference/KeyCode.KeypadPlus.html" style="color: #000000;">KeypadPlus</a></span></td>
+<td><span style="color: #000000;">Numeric keypad '+'.</span></td>
+</tr>
+<tr>
+<td><span style="color: #000000;"><a href="https://docs.unity3d.com/ScriptReference/KeyCode.KeypadEnter.html" style="color: #000000;">KeypadEnter</a></span></td>
+<td><span style="color: #000000;">Numeric keypad enter.</span></td>
+</tr>
+<tr>
+<td><span style="color: #000000;"><a href="https://docs.unity3d.com/ScriptReference/KeyCode.KeypadEquals.html" style="color: #000000;">KeypadEquals</a></span></td>
+<td><span style="color: #000000;">Numeric keypad '='.</span></td>
+</tr>
+<tr>
+<td><span style="color: #000000;"><a href="https://docs.unity3d.com/ScriptReference/KeyCode.UpArrow.html" style="color: #000000;">UpArrow</a></span></td>
+<td><span style="color: #000000;">Up arrow key.</span></td>
+</tr>
+<tr>
+<td><span style="color: #000000;"><a href="https://docs.unity3d.com/ScriptReference/KeyCode.DownArrow.html" style="color: #000000;">DownArrow</a></span></td>
+<td><span style="color: #000000;">Down arrow key.</span></td>
+</tr>
+<tr>
+<td><span style="color: #000000;"><a href="https://docs.unity3d.com/ScriptReference/KeyCode.RightArrow.html" style="color: #000000;">RightArrow</a></span></td>
+<td><span style="color: #000000;">Right arrow key.</span></td>
+</tr>
+<tr>
+<td><span style="color: #000000;"><a href="https://docs.unity3d.com/ScriptReference/KeyCode.LeftArrow.html" style="color: #000000;">LeftArrow</a></span></td>
+<td><span style="color: #000000;">Left arrow key.</span></td>
+</tr>
+<tr>
+<td><span style="color: #000000;"><a href="https://docs.unity3d.com/ScriptReference/KeyCode.Insert.html" style="color: #000000;">Insert</a></span></td>
+<td><span style="color: #000000;">Insert key key.</span></td>
+</tr>
+<tr>
+<td><span style="color: #000000;"><a href="https://docs.unity3d.com/ScriptReference/KeyCode.Home.html" style="color: #000000;">Home</a></span></td>
+<td><span style="color: #000000;">Home key.</span></td>
+</tr>
+<tr>
+<td><span style="color: #000000;"><a href="https://docs.unity3d.com/ScriptReference/KeyCode.End.html" style="color: #000000;">End</a></span></td>
+<td><span style="color: #000000;">End key.</span></td>
+</tr>
+<tr>
+<td><span style="color: #000000;"><a href="https://docs.unity3d.com/ScriptReference/KeyCode.PageUp.html" style="color: #000000;">PageUp</a></span></td>
+<td><span style="color: #000000;">Page up.</span></td>
+</tr>
+<tr>
+<td><span style="color: #000000;"><a href="https://docs.unity3d.com/ScriptReference/KeyCode.PageDown.html" style="color: #000000;">PageDown</a></span></td>
+<td><span style="color: #000000;">Page down.</span></td>
+</tr>
+<tr>
+<td><span style="color: #000000;"><a href="https://docs.unity3d.com/ScriptReference/KeyCode.F1.html" style="color: #000000;">F1</a></span></td>
+<td><span style="color: #000000;">F1 function key.</span></td>
+</tr>
+<tr>
+<td><span style="color: #000000;"><a href="https://docs.unity3d.com/ScriptReference/KeyCode.F2.html" style="color: #000000;">F2</a></span></td>
+<td><span style="color: #000000;">F2 function key.</span></td>
+</tr>
+<tr>
+<td><span style="color: #000000;"><a href="https://docs.unity3d.com/ScriptReference/KeyCode.F3.html" style="color: #000000;">F3</a></span></td>
+<td><span style="color: #000000;">F3 function key.</span></td>
+</tr>
+<tr>
+<td><span style="color: #000000;"><a href="https://docs.unity3d.com/ScriptReference/KeyCode.F4.html" style="color: #000000;">F4</a></span></td>
+<td><span style="color: #000000;">F4 function key.</span></td>
+</tr>
+<tr>
+<td><span style="color: #000000;"><a href="https://docs.unity3d.com/ScriptReference/KeyCode.F5.html" style="color: #000000;">F5</a></span></td>
+<td><span style="color: #000000;">F5 function key.</span></td>
+</tr>
+<tr>
+<td><span style="color: #000000;"><a href="https://docs.unity3d.com/ScriptReference/KeyCode.F6.html" style="color: #000000;">F6</a></span></td>
+<td><span style="color: #000000;">F6 function key.</span></td>
+</tr>
+<tr>
+<td><span style="color: #000000;"><a href="https://docs.unity3d.com/ScriptReference/KeyCode.F7.html" style="color: #000000;">F7</a></span></td>
+<td><span style="color: #000000;">F7 function key.</span></td>
+</tr>
+<tr>
+<td><span style="color: #000000;"><a href="https://docs.unity3d.com/ScriptReference/KeyCode.F8.html" style="color: #000000;">F8</a></span></td>
+<td><span style="color: #000000;">F8 function key.</span></td>
+</tr>
+<tr>
+<td><span style="color: #000000;"><a href="https://docs.unity3d.com/ScriptReference/KeyCode.F9.html" style="color: #000000;">F9</a></span></td>
+<td><span style="color: #000000;">F9 function key.</span></td>
+</tr>
+<tr>
+<td><span style="color: #000000;"><a href="https://docs.unity3d.com/ScriptReference/KeyCode.F10.html" style="color: #000000;">F10</a></span></td>
+<td><span style="color: #000000;">F10 function key.</span></td>
+</tr>
+<tr>
+<td><span style="color: #000000;"><a href="https://docs.unity3d.com/ScriptReference/KeyCode.F11.html" style="color: #000000;">F11</a></span></td>
+<td><span style="color: #000000;">F11 function key.</span></td>
+</tr>
+<tr>
+<td><span style="color: #000000;"><a href="https://docs.unity3d.com/ScriptReference/KeyCode.F12.html" style="color: #000000;">F12</a></span></td>
+<td><span style="color: #000000;">F12 function key.</span></td>
+</tr>
+<tr>
+<td><span style="color: #000000;"><a href="https://docs.unity3d.com/ScriptReference/KeyCode.F13.html" style="color: #000000;">F13</a></span></td>
+<td><span style="color: #000000;">F13 function key.</span></td>
+</tr>
+<tr>
+<td><span style="color: #000000;"><a href="https://docs.unity3d.com/ScriptReference/KeyCode.F14.html" style="color: #000000;">F14</a></span></td>
+<td><span style="color: #000000;">F14 function key.</span></td>
+</tr>
+<tr>
+<td><span style="color: #000000;"><a href="https://docs.unity3d.com/ScriptReference/KeyCode.F15.html" style="color: #000000;">F15</a></span></td>
+<td><span style="color: #000000;">F15 function key.</span></td>
+</tr>
+<tr>
+<td><span style="color: #000000;"><a href="https://docs.unity3d.com/ScriptReference/KeyCode.Alpha0.html" style="color: #000000;">Alpha0</a></span></td>
+<td><span style="color: #000000;">The '0' key on the top of the alphanumeric keyboard.</span></td>
+</tr>
+<tr>
+<td><span style="color: #000000;"><a href="https://docs.unity3d.com/ScriptReference/KeyCode.Alpha1.html" style="color: #000000;">Alpha1</a></span></td>
+<td><span style="color: #000000;">The '1' key on the top of the alphanumeric keyboard.</span></td>
+</tr>
+<tr>
+<td><span style="color: #000000;"><a href="https://docs.unity3d.com/ScriptReference/KeyCode.Alpha2.html" style="color: #000000;">Alpha2</a></span></td>
+<td><span style="color: #000000;">The '2' key on the top of the alphanumeric keyboard.</span></td>
+</tr>
+<tr>
+<td><span style="color: #000000;"><a href="https://docs.unity3d.com/ScriptReference/KeyCode.Alpha3.html" style="color: #000000;">Alpha3</a></span></td>
+<td><span style="color: #000000;">The '3' key on the top of the alphanumeric keyboard.</span></td>
+</tr>
+<tr>
+<td><span style="color: #000000;"><a href="https://docs.unity3d.com/ScriptReference/KeyCode.Alpha4.html" style="color: #000000;">Alpha4</a></span></td>
+<td><span style="color: #000000;">The '4' key on the top of the alphanumeric keyboard.</span></td>
+</tr>
+<tr>
+<td><span style="color: #000000;"><a href="https://docs.unity3d.com/ScriptReference/KeyCode.Alpha5.html" style="color: #000000;">Alpha5</a></span></td>
+<td><span style="color: #000000;">The '5' key on the top of the alphanumeric keyboard.</span></td>
+</tr>
+<tr>
+<td><span style="color: #000000;"><a href="https://docs.unity3d.com/ScriptReference/KeyCode.Alpha6.html" style="color: #000000;">Alpha6</a></span></td>
+<td><span style="color: #000000;">The '6' key on the top of the alphanumeric keyboard.</span></td>
+</tr>
+<tr>
+<td><span style="color: #000000;"><a href="https://docs.unity3d.com/ScriptReference/KeyCode.Alpha7.html" style="color: #000000;">Alpha7</a></span></td>
+<td><span style="color: #000000;">The '7' key on the top of the alphanumeric keyboard.</span></td>
+</tr>
+<tr>
+<td><span style="color: #000000;"><a href="https://docs.unity3d.com/ScriptReference/KeyCode.Alpha8.html" style="color: #000000;">Alpha8</a></span></td>
+<td><span style="color: #000000;">The '8' key on the top of the alphanumeric keyboard.</span></td>
+</tr>
+<tr>
+<td><span style="color: #000000;"><a href="https://docs.unity3d.com/ScriptReference/KeyCode.Alpha9.html" style="color: #000000;">Alpha9</a></span></td>
+<td><span style="color: #000000;">The '9' key on the top of the alphanumeric keyboard.</span></td>
+</tr>
+<tr>
+<td><span style="color: #000000;"><a href="https://docs.unity3d.com/ScriptReference/KeyCode.Exclaim.html" style="color: #000000;">Exclaim</a></span></td>
+<td><span style="color: #000000;">Exclamation mark key '!'.</span></td>
+</tr>
+<tr>
+<td><span style="color: #000000;"><a href="https://docs.unity3d.com/ScriptReference/KeyCode.DoubleQuote.html" style="color: #000000;">DoubleQuote</a></span></td>
+<td><span style="color: #000000;">Double quote key '"'.</span></td>
+</tr>
+<tr>
+<td><span style="color: #000000;"><a href="https://docs.unity3d.com/ScriptReference/KeyCode.Hash.html" style="color: #000000;">Hash</a></span></td>
+<td><span style="color: #000000;">Hash key '#'.</span></td>
+</tr>
+<tr>
+<td><span style="color: #000000;"><a href="https://docs.unity3d.com/ScriptReference/KeyCode.Dollar.html" style="color: #000000;">Dollar</a></span></td>
+<td><span style="color: #000000;">Dollar sign key '$'.</span></td>
+</tr>
+<tr>
+<td><span style="color: #000000;"><a href="https://docs.unity3d.com/ScriptReference/KeyCode.Ampersand.html" style="color: #000000;">Ampersand</a></span></td>
+<td><span style="color: #000000;">Ampersand key '&amp;'.</span></td>
+</tr>
+<tr>
+<td><span style="color: #000000;"><a href="https://docs.unity3d.com/ScriptReference/KeyCode.Quote.html" style="color: #000000;">Quote</a></span></td>
+<td><span style="color: #000000;">Quote key '.</span></td>
+</tr>
+<tr>
+<td><span style="color: #000000;"><a href="https://docs.unity3d.com/ScriptReference/KeyCode.LeftParen.html" style="color: #000000;">LeftParen</a></span></td>
+<td><span style="color: #000000;">Left Parenthesis key '('.</span></td>
+</tr>
+<tr>
+<td><span style="color: #000000;"><a href="https://docs.unity3d.com/ScriptReference/KeyCode.RightParen.html" style="color: #000000;">RightParen</a></span></td>
+<td><span style="color: #000000;">Right Parenthesis key ')'.</span></td>
+</tr>
+<tr>
+<td><span style="color: #000000;"><a href="https://docs.unity3d.com/ScriptReference/KeyCode.Asterisk.html" style="color: #000000;">Asterisk</a></span></td>
+<td><span style="color: #000000;">Asterisk key '*'.</span></td>
+</tr>
+<tr>
+<td><span style="color: #000000;"><a href="https://docs.unity3d.com/ScriptReference/KeyCode.Plus.html" style="color: #000000;">Plus</a></span></td>
+<td><span style="color: #000000;">Plus key '+'.</span></td>
+</tr>
+<tr>
+<td><span style="color: #000000;"><a href="https://docs.unity3d.com/ScriptReference/KeyCode.Comma.html" style="color: #000000;">Comma</a></span></td>
+<td><span style="color: #000000;">Comma ',' key.</span></td>
+</tr>
+<tr>
+<td><span style="color: #000000;"><a href="https://docs.unity3d.com/ScriptReference/KeyCode.Minus.html" style="color: #000000;">Minus</a></span></td>
+<td><span style="color: #000000;">Minus '-' key.</span></td>
+</tr>
+<tr>
+<td><span style="color: #000000;"><a href="https://docs.unity3d.com/ScriptReference/KeyCode.Period.html" style="color: #000000;">Period</a></span></td>
+<td><span style="color: #000000;">Period '.' key.</span></td>
+</tr>
+<tr>
+<td><span style="color: #000000;"><a href="https://docs.unity3d.com/ScriptReference/KeyCode.Slash.html" style="color: #000000;">Slash</a></span></td>
+<td><span style="color: #000000;">Slash '/' key.</span></td>
+</tr>
+<tr>
+<td><span style="color: #000000;"><a href="https://docs.unity3d.com/ScriptReference/KeyCode.Colon.html" style="color: #000000;">Colon</a></span></td>
+<td><span style="color: #000000;">Colon ':' key.</span></td>
+</tr>
+<tr>
+<td><span style="color: #000000;"><a href="https://docs.unity3d.com/ScriptReference/KeyCode.Semicolon.html" style="color: #000000;">Semicolon</a></span></td>
+<td><span style="color: #000000;">Semicolon ';' key.</span></td>
+</tr>
+<tr>
+<td><span style="color: #000000;"><a href="https://docs.unity3d.com/ScriptReference/KeyCode.Less.html" style="color: #000000;">Less</a></span></td>
+<td><span style="color: #000000;">Less than '&lt;' key.</span></td>
+</tr>
+<tr>
+<td><span style="color: #000000;"><a href="https://docs.unity3d.com/ScriptReference/KeyCode.Equals.html" style="color: #000000;">Equals</a></span></td>
+<td><span style="color: #000000;">Equals '=' key.</span></td>
+</tr>
+<tr>
+<td><span style="color: #000000;"><a href="https://docs.unity3d.com/ScriptReference/KeyCode.Greater.html" style="color: #000000;">Greater</a></span></td>
+<td><span style="color: #000000;">Greater than '&gt;' key.</span></td>
+</tr>
+<tr>
+<td><span style="color: #000000;"><a href="https://docs.unity3d.com/ScriptReference/KeyCode.Question.html" style="color: #000000;">Question</a></span></td>
+<td><span style="color: #000000;">Question mark '?' key.</span></td>
+</tr>
+<tr>
+<td><span style="color: #000000;"><a href="https://docs.unity3d.com/ScriptReference/KeyCode.At.html" style="color: #000000;">At</a></span></td>
+<td><span style="color: #000000;">At key '@'.</span></td>
+</tr>
+<tr>
+<td><span style="color: #000000;"><a href="https://docs.unity3d.com/ScriptReference/KeyCode.LeftBracket.html" style="color: #000000;">LeftBracket</a></span></td>
+<td><span style="color: #000000;">Left square bracket key '['.</span></td>
+</tr>
+<tr>
+<td><span style="color: #000000;"><a href="https://docs.unity3d.com/ScriptReference/KeyCode.Backslash.html" style="color: #000000;">Backslash</a></span></td>
+<td><span style="color: #000000;">Backslash key '\'.</span></td>
+</tr>
+<tr>
+<td><span style="color: #000000;"><a href="https://docs.unity3d.com/ScriptReference/KeyCode.RightBracket.html" style="color: #000000;">RightBracket</a></span></td>
+<td><span style="color: #000000;">Right square bracket key ']'.</span></td>
+</tr>
+<tr>
+<td><span style="color: #000000;"><a href="https://docs.unity3d.com/ScriptReference/KeyCode.Caret.html" style="color: #000000;">Caret</a></span></td>
+<td><span style="color: #000000;">Caret key '^'.</span></td>
+</tr>
+<tr>
+<td><span style="color: #000000;"><a href="https://docs.unity3d.com/ScriptReference/KeyCode.Underscore.html" style="color: #000000;">Underscore</a></span></td>
+<td><span style="color: #000000;">Underscore '_' key.</span></td>
+</tr>
+<tr>
+<td><span style="color: #000000;"><a href="https://docs.unity3d.com/ScriptReference/KeyCode.BackQuote.html" style="color: #000000;">BackQuote</a></span></td>
+<td><span style="color: #000000;">Back quote key '`'.</span></td>
+</tr>
+<tr>
+<td><span style="color: #000000;"><a href="https://docs.unity3d.com/ScriptReference/KeyCode.A.html" style="color: #000000;">A</a></span></td>
+<td><span style="color: #000000;">'a' key.</span></td>
+</tr>
+<tr>
+<td><span style="color: #000000;"><a href="https://docs.unity3d.com/ScriptReference/KeyCode.B.html" style="color: #000000;">B</a></span></td>
+<td><span style="color: #000000;">'b' key.</span></td>
+</tr>
+<tr>
+<td><span style="color: #000000;"><a href="https://docs.unity3d.com/ScriptReference/KeyCode.C.html" style="color: #000000;">C</a></span></td>
+<td><span style="color: #000000;">'c' key.</span></td>
+</tr>
+<tr>
+<td><span style="color: #000000;"><a href="https://docs.unity3d.com/ScriptReference/KeyCode.D.html" style="color: #000000;">D</a></span></td>
+<td><span style="color: #000000;">'d' key.</span></td>
+</tr>
+<tr>
+<td><span style="color: #000000;"><a href="https://docs.unity3d.com/ScriptReference/KeyCode.E.html" style="color: #000000;">E</a></span></td>
+<td><span style="color: #000000;">'e' key.</span></td>
+</tr>
+<tr>
+<td><span style="color: #000000;"><a href="https://docs.unity3d.com/ScriptReference/KeyCode.F.html" style="color: #000000;">F</a></span></td>
+<td><span style="color: #000000;">'f' key.</span></td>
+</tr>
+<tr>
+<td><span style="color: #000000;"><a href="https://docs.unity3d.com/ScriptReference/KeyCode.G.html" style="color: #000000;">G</a></span></td>
+<td><span style="color: #000000;">'g' key.</span></td>
+</tr>
+<tr>
+<td><span style="color: #000000;"><a href="https://docs.unity3d.com/ScriptReference/KeyCode.H.html" style="color: #000000;">H</a></span></td>
+<td><span style="color: #000000;">'h' key.</span></td>
+</tr>
+<tr>
+<td><span style="color: #000000;"><a href="https://docs.unity3d.com/ScriptReference/KeyCode.I.html" style="color: #000000;">I</a></span></td>
+<td><span style="color: #000000;">'i' key.</span></td>
+</tr>
+<tr>
+<td><span style="color: #000000;"><a href="https://docs.unity3d.com/ScriptReference/KeyCode.J.html" style="color: #000000;">J</a></span></td>
+<td><span style="color: #000000;">'j' key.</span></td>
+</tr>
+<tr>
+<td><span style="color: #000000;"><a href="https://docs.unity3d.com/ScriptReference/KeyCode.K.html" style="color: #000000;">K</a></span></td>
+<td><span style="color: #000000;">'k' key.</span></td>
+</tr>
+<tr>
+<td><span style="color: #000000;"><a href="https://docs.unity3d.com/ScriptReference/KeyCode.L.html" style="color: #000000;">L</a></span></td>
+<td><span style="color: #000000;">'l' key.</span></td>
+</tr>
+<tr>
+<td><span style="color: #000000;"><a href="https://docs.unity3d.com/ScriptReference/KeyCode.M.html" style="color: #000000;">M</a></span></td>
+<td><span style="color: #000000;">'m' key.</span></td>
+</tr>
+<tr>
+<td><span style="color: #000000;"><a href="https://docs.unity3d.com/ScriptReference/KeyCode.N.html" style="color: #000000;">N</a></span></td>
+<td><span style="color: #000000;">'n' key.</span></td>
+</tr>
+<tr>
+<td><span style="color: #000000;"><a href="https://docs.unity3d.com/ScriptReference/KeyCode.O.html" style="color: #000000;">O</a></span></td>
+<td><span style="color: #000000;">'o' key.</span></td>
+</tr>
+<tr>
+<td><span style="color: #000000;"><a href="https://docs.unity3d.com/ScriptReference/KeyCode.P.html" style="color: #000000;">P</a></span></td>
+<td><span style="color: #000000;">'p' key.</span></td>
+</tr>
+<tr>
+<td><span style="color: #000000;"><a href="https://docs.unity3d.com/ScriptReference/KeyCode.Q.html" style="color: #000000;">Q</a></span></td>
+<td><span style="color: #000000;">'q' key.</span></td>
+</tr>
+<tr>
+<td><span style="color: #000000;"><a href="https://docs.unity3d.com/ScriptReference/KeyCode.R.html" style="color: #000000;">R</a></span></td>
+<td><span style="color: #000000;">'r' key.</span></td>
+</tr>
+<tr>
+<td><span style="color: #000000;"><a href="https://docs.unity3d.com/ScriptReference/KeyCode.S.html" style="color: #000000;">S</a></span></td>
+<td><span style="color: #000000;">'s' key.</span></td>
+</tr>
+<tr>
+<td><span style="color: #000000;"><a href="https://docs.unity3d.com/ScriptReference/KeyCode.T.html" style="color: #000000;">T</a></span></td>
+<td><span style="color: #000000;">'t' key.</span></td>
+</tr>
+<tr>
+<td><span style="color: #000000;"><a href="https://docs.unity3d.com/ScriptReference/KeyCode.U.html" style="color: #000000;">U</a></span></td>
+<td><span style="color: #000000;">'u' key.</span></td>
+</tr>
+<tr>
+<td><span style="color: #000000;"><a href="https://docs.unity3d.com/ScriptReference/KeyCode.V.html" style="color: #000000;">V</a></span></td>
+<td><span style="color: #000000;">'v' key.</span></td>
+</tr>
+<tr>
+<td><span style="color: #000000;"><a href="https://docs.unity3d.com/ScriptReference/KeyCode.W.html" style="color: #000000;">W</a></span></td>
+<td><span style="color: #000000;">'w' key.</span></td>
+</tr>
+<tr>
+<td><span style="color: #000000;"><a href="https://docs.unity3d.com/ScriptReference/KeyCode.X.html" style="color: #000000;">X</a></span></td>
+<td><span style="color: #000000;">'x' key.</span></td>
+</tr>
+<tr>
+<td><span style="color: #000000;"><a href="https://docs.unity3d.com/ScriptReference/KeyCode.Y.html" style="color: #000000;">Y</a></span></td>
+<td><span style="color: #000000;">'y' key.</span></td>
+</tr>
+<tr>
+<td><span style="color: #000000;"><a href="https://docs.unity3d.com/ScriptReference/KeyCode.Z.html" style="color: #000000;">Z</a></span></td>
+<td><span style="color: #000000;">'z' key.</span></td>
+</tr>
+<tr>
+<td><span style="color: #000000;"><a href="https://docs.unity3d.com/ScriptReference/KeyCode.Numlock.html" style="color: #000000;">Numlock</a></span></td>
+<td><span style="color: #000000;">Numlock key.</span></td>
+</tr>
+<tr>
+<td><span style="color: #000000;"><a href="https://docs.unity3d.com/ScriptReference/KeyCode.CapsLock.html" style="color: #000000;">CapsLock</a></span></td>
+<td><span style="color: #000000;">Capslock key.</span></td>
+</tr>
+<tr>
+<td><span style="color: #000000;"><a href="https://docs.unity3d.com/ScriptReference/KeyCode.ScrollLock.html" style="color: #000000;">ScrollLock</a></span></td>
+<td><span style="color: #000000;">Scroll lock key.</span></td>
+</tr>
+<tr>
+<td><span style="color: #000000;"><a href="https://docs.unity3d.com/ScriptReference/KeyCode.RightShift.html" style="color: #000000;">RightShift</a></span></td>
+<td><span style="color: #000000;">Right shift key.</span></td>
+</tr>
+<tr>
+<td><span style="color: #000000;"><a href="https://docs.unity3d.com/ScriptReference/KeyCode.LeftShift.html" style="color: #000000;">LeftShift</a></span></td>
+<td><span style="color: #000000;">Left shift key.</span></td>
+</tr>
+<tr>
+<td><span style="color: #000000;"><a href="https://docs.unity3d.com/ScriptReference/KeyCode.RightControl.html" style="color: #000000;">RightControl</a></span></td>
+<td><span style="color: #000000;">Right Control key.</span></td>
+</tr>
+<tr>
+<td><span style="color: #000000;"><a href="https://docs.unity3d.com/ScriptReference/KeyCode.LeftControl.html" style="color: #000000;">LeftControl</a></span></td>
+<td><span style="color: #000000;">Left Control key.</span></td>
+</tr>
+<tr>
+<td><span style="color: #000000;"><a href="https://docs.unity3d.com/ScriptReference/KeyCode.RightAlt.html" style="color: #000000;">RightAlt</a></span></td>
+<td><span style="color: #000000;">Right Alt key.</span></td>
+</tr>
+<tr>
+<td><span style="color: #000000;"><a href="https://docs.unity3d.com/ScriptReference/KeyCode.LeftAlt.html" style="color: #000000;">LeftAlt</a></span></td>
+<td><span style="color: #000000;">Left Alt key.</span></td>
+</tr>
+<tr>
+<td><span style="color: #000000;"><a href="https://docs.unity3d.com/ScriptReference/KeyCode.LeftCommand.html" style="color: #000000;">LeftCommand</a></span></td>
+<td><span style="color: #000000;">Left Command key.</span></td>
+</tr>
+<tr>
+<td><span style="color: #000000;"><a href="https://docs.unity3d.com/ScriptReference/KeyCode.LeftApple.html" style="color: #000000;">LeftApple</a></span></td>
+<td><span style="color: #000000;">Left Command key.</span></td>
+</tr>
+<tr>
+<td><span style="color: #000000;"><a href="https://docs.unity3d.com/ScriptReference/KeyCode.LeftWindows.html" style="color: #000000;">LeftWindows</a></span></td>
+<td><span style="color: #000000;">Left Windows key.</span></td>
+</tr>
+<tr>
+<td><span style="color: #000000;"><a href="https://docs.unity3d.com/ScriptReference/KeyCode.RightCommand.html" style="color: #000000;">RightCommand</a></span></td>
+<td><span style="color: #000000;">Right Command key.</span></td>
+</tr>
+<tr>
+<td><span style="color: #000000;"><a href="https://docs.unity3d.com/ScriptReference/KeyCode.RightApple.html" style="color: #000000;">RightApple</a></span></td>
+<td><span style="color: #000000;">Right Command key.</span></td>
+</tr>
+<tr>
+<td><span style="color: #000000;"><a href="https://docs.unity3d.com/ScriptReference/KeyCode.RightWindows.html" style="color: #000000;">RightWindows</a></span></td>
+<td><span style="color: #000000;">Right Windows key.</span></td>
+</tr>
+<tr>
+<td><span style="color: #000000;"><a href="https://docs.unity3d.com/ScriptReference/KeyCode.AltGr.html" style="color: #000000;">AltGr</a></span></td>
+<td><span style="color: #000000;">Alt Gr key.</span></td>
+</tr>
+<tr>
+<td><span style="color: #000000;"><a href="https://docs.unity3d.com/ScriptReference/KeyCode.Help.html" style="color: #000000;">Help</a></span></td>
+<td><span style="color: #000000;">Help key.</span></td>
+</tr>
+<tr>
+<td><span style="color: #000000;"><a href="https://docs.unity3d.com/ScriptReference/KeyCode.Print.html" style="color: #000000;">Print</a></span></td>
+<td><span style="color: #000000;">Print key.</span></td>
+</tr>
+<tr>
+<td><span style="color: #000000;"><a href="https://docs.unity3d.com/ScriptReference/KeyCode.SysReq.html" style="color: #000000;">SysReq</a></span></td>
+<td><span style="color: #000000;">Sys Req key.</span></td>
+</tr>
+<tr>
+<td><span style="color: #000000;"><a href="https://docs.unity3d.com/ScriptReference/KeyCode.Break.html" style="color: #000000;">Break</a></span></td>
+<td><span style="color: #000000;">Break key.</span></td>
+</tr>
+<tr>
+<td><span style="color: #000000;"><a href="https://docs.unity3d.com/ScriptReference/KeyCode.Menu.html" style="color: #000000;">Menu</a></span></td>
+<td><span style="color: #000000;">Menu key.</span></td>
+</tr>
+<tr>
+<td><span style="color: #000000;"><a href="https://docs.unity3d.com/ScriptReference/KeyCode.Mouse0.html" style="color: #000000;">Mouse0</a></span></td>
+<td><span style="color: #000000;">First (primary) mouse button.</span></td>
+</tr>
+<tr>
+<td><span style="color: #000000;"><a href="https://docs.unity3d.com/ScriptReference/KeyCode.Mouse1.html" style="color: #000000;">Mouse1</a></span></td>
+<td><span style="color: #000000;">Second (secondary) mouse button.</span></td>
+</tr>
+<tr>
+<td><span style="color: #000000;"><a href="https://docs.unity3d.com/ScriptReference/KeyCode.Mouse2.html" style="color: #000000;">Mouse2</a></span></td>
+<td><span style="color: #000000;">Third mouse button.</span></td>
+</tr>
+<tr>
+<td><span style="color: #000000;"><a href="https://docs.unity3d.com/ScriptReference/KeyCode.Mouse3.html" style="color: #000000;">Mouse3</a></span></td>
+<td><span style="color: #000000;">Fourth mouse button.</span></td>
+</tr>
+<tr>
+<td><span style="color: #000000;"><a href="https://docs.unity3d.com/ScriptReference/KeyCode.Mouse4.html" style="color: #000000;">Mouse4</a></span></td>
+<td><span style="color: #000000;">Fifth mouse button.</span></td>
+</tr>
+<tr>
+<td><span style="color: #000000;"><a href="https://docs.unity3d.com/ScriptReference/KeyCode.Mouse5.html" style="color: #000000;">Mouse5</a></span></td>
+<td><span style="color: #000000;">Sixth mouse button.</span></td>
+</tr>
+<tr>
+<td><span style="color: #000000;"><a href="https://docs.unity3d.com/ScriptReference/KeyCode.Mouse6.html" style="color: #000000;">Mouse6</a></span></td>
+<td><span style="color: #000000;">Seventh mouse button.</span></td>
+</tr>
+</tbody>
+</table>
+<p style="text-align: center;"></p>
+<h2><span style="color: #000000; font-size: 18pt;">Random Numbers</span></h2>
+<p><span style="color: #000000; font-size: 12pt;">The last little detail to look at is randomization. To make a random number you first declare a variable and then use Random.Range(min, max); The example below generates a number between 1 and 100.</span></p>
+<p><span style="color: #000000; font-size: 12pt;">int myRandomNumber;</span></p>
+<p><span style="color: #000000; font-size: 12pt;">myRandomNumber = Random.Range (1, 100);</span></p>
+<h2><span style="color: #000000; font-size: 12pt;"></span>Functions</h2>
+<p><span style="color: #000000; font-size: 12pt;">Up to this point we have been keeping our code in either the <strong>Start()</strong> or <strong>Update ()</strong> sections of the code. However, there is a lot more we can do with our code outside of these sections. Both the Start and Update sections are actually something called a function.</span></p>
+<p><span style="color: #000000; font-size: 12pt;">A function is a block of code that can be called on to be used whenever we want, but only when we want it. This means that it is not included in our main body of code and is not used constantly throughout the program. This is very valuable because it helps to organize our code, and since all that we need to do is call on the function to use it, this means we do not have to have repeated lines of code in our program.</span></p>
+<p><span style="color: #000000; font-size: 12pt;">To create a function we simply do the following:</span></p>
+<p><span style="color: #000000; font-size: 12pt;"><img src="/content/enforced/10349406-BL_TE_TEJ3MI-01_776726_1718Sem1/Programming/pics1/Function1.jpeg?_&amp;d2lSessionVal=KmEIuYUIJOYPrmE3M0vvSLDJI&amp;ou=10349406" alt="" title="" width="440" height="136" />&nbsp;</span></p>
+<p><span style="color: #000000; font-size: 12pt;">The word <strong>public</strong> means that it can be called from anywhere in the program. The word <strong>void</strong> means that the function will have no value; it will only complete a task. And the word(s) <strong>myFunction()</strong> is just a variable name and can be anything that is a single word.</span></p>
+<p><span style="color: #000000; font-size: 12pt;">Of course, making a function is only half of the process, we also need to call our function in order to run the code inside of it. In order to call the function in our example above we simply use the line of code:</span></p>
+<p><span style="color: #ff9900; font-size: 12pt;"><strong>myFunction();</strong></span></p>
+<p><span style="color: #000000; font-size: 12pt;">With all of this in mind, let's look at a very simple example where we call on a function to print out the words "Hello World".</span></p>
+<p><img src="pics3/function1.PNG" alt="" title="" width="533" height="302" /></p>
+<p><span style="color: #000000; font-size: 12pt;">However, this is a very simple example and only presents the most basic purpose of using functions. In our next example we are going to "send" information to our function that can then be used. This is extremely valuable because this allows us to keep a generic set of code that can take in variables to fit a specific situation.</span></p>
+<p><span style="color: #000000; font-size: 12pt;"><img src="/content/enforced/10349406-BL_TE_TEJ3MI-01_776726_1718Sem1/Programming/pics1/Function2.jpeg?_&amp;d2lSessionVal=KmEIuYUIJOYPrmE3M0vvSLDJI&amp;ou=10349406" alt="" title="" width="429" height="261" /></span></p>
+<p><span style="color: #000000; font-size: 12pt;">In this example we are calling the function and sending two pieces of information; in this instance two numbers. We then tell our function what to expect; in this case two numbers. It is important to note that if you setup a function to receive a set number of pieces of information, you must send that same number and type of information when you call it.</span></p>
+<p><span style="color: #000000; font-size: 12pt;">The third type type of function is one that "returns" information back to the first function:</span></p>
+<p><span style="color: #000000; font-size: 12pt;"><img src="/content/enforced/10349406-BL_TE_TEJ3MI-01_776726_1718Sem1/Programming/pics1/Function3.jpeg?_&amp;d2lSessionVal=KmEIuYUIJOYPrmE3M0vvSLDJI&amp;ou=10349406" alt="" title="" width="510" height="292" /></span></p>
+<p><span style="color: #000000; font-size: 12pt;">In this example,&nbsp;we have a function call doStuff. This function would be called by pushing a button or some other user action. Within the function we have a variable, called thisVariable, that is setup to hold the value that is returned from myFunction. If we then look at my function we see that it returns text. It is also very important to notice that the function is declared as a string (for text and words) rather than void. A void function does not and cannot return a value, and a function can only return the type of value for which it is declared. In this example, myFunction would not be able to return numbers, it can only return text and variables that are declared as string. The information is then returned to our starting function and is used to print.</span></p>
+<p><span style="color: #000000; font-size: 12pt;">The final type of function, if you have not already guessed, is a function that both receives and returns information:</span></p>
+<p><span style="color: #000000; font-size: 12pt;"><img src="/content/enforced/10349406-BL_TE_TEJ3MI-01_776726_1718Sem1/Programming/pics1/Function4.jpeg?_&amp;d2lSessionVal=KmEIuYUIJOYPrmE3M0vvSLDJI&amp;ou=10349406" alt="" title="" width="567" height="308" /></span></p>
+<p><span style="color: #000000; font-size: 12pt;">In this example,&nbsp;we have a function call doStuff. This function would be called by pushing a button or some other user action. Within the function we have a variable, called thisVariable, that is setup to hold the value that is returned from myFunction. It works just like our last example except that it also sends the specific information to myFunction. So what we see here is just a combination of the previous two examples. Again, it is important to note that myFunction is declared as an integer as that is the value type that it will be returning.</span></p>
+<h2><span style="font-size: 24pt;">Exercises</span></h2>
+<ol>
+<li><span style="color: #000000; font-size: 12pt;">Create a program that uses the arrow keys to cause counting to occur. When you press the up arrow, the computer should print out counting moving in the upward direction. Use a third key to cause the program to stop counting. NOTE: you will need to use a while loop that is True or False.</span></li>
+<li><span style="color: #000000; font-size: 12pt;">Create a program that does some simple math. Using the four arrow keys and three variables use the arrow keys to send the variables to functions to complete the following four equations and then return the results to be printed:</span></li>
+</ol>
+<ul>
+<ul>
+<ul>
+<li><span style="color: #000000; font-size: 12pt;">up arrow = var1 + var2 + var3</span></li>
+<li><span style="color: #000000; font-size: 12pt;">right arrow = var2 * var1 / var3</span></li>
+<li><span style="color: #000000; font-size: 12pt;">down arrow = var1 + var1 + var1 (do not use multiplication)</span></li>
+<li><span style="color: #000000; font-size: 12pt;">left arrow = (var2 * var3 + (var1 * var2)) / var3</span></li>
+</ul>
+</ul>
+</ul>
+<p></p>
+<p></p>
+<p></p>
+</form></div>
+</div>
+</div>
+</div>
+<p><br /><span lang="EN-US" style="font-size: 14pt;"></span></p>
+</div>
+</div>
+</body>
+</html>

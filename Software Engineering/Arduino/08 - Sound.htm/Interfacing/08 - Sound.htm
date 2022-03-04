@@ -1,0 +1,58 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<head lang="en">
+<link href="TemplateFiles/stylesheet.css" type="text/css" rel="stylesheet" />
+<meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+<title>Sample Content Topic</title>
+</head>
+<body>
+<div id="container">
+<div id="decorative">&nbsp;&nbsp;</div>
+<div id="header">
+<div class="courseTitle">TEJ 3MI Grade&nbsp;11 Computer Engineering Technology</div>
+<h1 class="header">interfacing</h1>
+<h2 class="header">Using Sound</h2>
+</div>
+<div id="footnotes">
+<pre><a href="BasicElectronics.odp" target="_blank" rel="noopener"></a></pre>
+<p><span lang="EN"><span lang="EN"><span style="font-size: 12pt;">Up until now our programs have been interesting to look at, but at the same time, they have been missing something. Now it's time to add some sound to our programs. Not just sound, but music.</span></span></span></p>
+<div class="page" title="Page 63">
+<div class="layoutArea">
+<div class="column">
+<p><span style="font-size: 12pt;">In this circuit, we'll again bridge the gap between the digital world and the analog world. We'll be using a buzzer that makes a small "click" when you apply voltage to it (try it!). By itself that isn't terribly exciting, but if you turn the voltage on and o hundreds of times a second, the buzzer will produce a tone. And if you string a bunch of tones together, you've got music! is circuit and sketch will play a classic tune.&nbsp;</span></p>
+</div>
+</div>
+</div>
+<h2>Wiring Setup</h2>
+<p><span style="font-size: 12pt;"> The buzzer has two pins. One is positive and one is negative.</span>&nbsp;<span style="font-size: 12pt;">The postitive pin is marked by a "+" symbol on both the top</span>&nbsp;<span style="font-size: 12pt;">and bottom of the buzzer.</span><br /><br /><span style="font-size: 12pt;"> Connect the positive pin to Arduino digital pin 9.</span>&nbsp;<span style="font-size: 12pt;">(Note that this must be a PWM pin.)</span>&nbsp;<span style="font-size: 12pt;">Connect the negative pin to GND.</span><br /><br /><span style="font-size: 12pt;"> Tip: if the buzzer doesn't fit into the breadboard easily,</span>&nbsp;<span style="font-size: 12pt;">try rotating it slightly to fit into diagonal holes.</span></p>
+<p><span style="font-size: 12pt;">The Arduino's tone() command will play notes of a given frequency.</span><span>&nbsp;</span><span style="font-size: 12pt;">We'll provide a function that takes in note characters (a-g),</span><span>&nbsp;</span><span style="font-size: 12pt;">and returns the corresponding frequency from this table:</span></p>
+<p><span style="text-decoration: underline;"><strong><span style="font-size: 12pt;">Note Frequency</span></strong></span><br /><span style="font-size: 12pt;"> c 262 Hz</span><br /><span style="font-size: 12pt;"> d 294 Hz</span><br /><span style="font-size: 12pt;"> e 330 Hz</span><br /><span style="font-size: 12pt;"> f 349 Hz</span><br /><span style="font-size: 12pt;"> g 392 Hz</span><br /><span style="font-size: 12pt;"> a 440 Hz</span><br /><span style="font-size: 12pt;"> b 494 Hz</span><br /><span style="font-size: 12pt;"> C 523 Hz</span></p>
+<p style="text-align: center;">&nbsp; &nbsp;&nbsp;<img src="pics/Buzer%20Setup.gif" alt="" title="" width="692" height="493" /></p>
+<p style="text-align: center;"><img src="pics/Buzzer%20Circuit.gif" alt="" title="" /></p>
+<h2>Programming</h2>
+<p><span style="font-size: 12pt;">Copy the program below into the Sketch program.</span></p>
+<p><img src="pics/Buzzer%20Code%201.gif" alt="" title="" width="623" height="390" /></p>
+<p><img src="pics/Buzzer%20Code%202.gif" alt="" title="" width="624" height="478" /></p>
+<p><img src="pics/Buzzer%20Code%203.gif" alt="" title="" width="621" height="412" /></p>
+<p><img src="pics/Buzzer%20Explained.gif" alt="" title="" width="653" height="256" /></p>
+<h2>Exercises</h2>
+<div class="page" title="Page 24">
+<div class="layoutArea">
+<div class="column">
+<ol>
+<li>
+<p><span style="font-size: 12pt;">Change the&nbsp;tempo of the song to make it play faster and slower</span>.</p>
+</li>
+<li><span style="font-size: 12pt;">Change the program to to play every note in the scale: c, c#, d, d#, e, f, f#, g, g#, a, a#, b, C</span></li>
+<li>
+<p><span style="font-size: 12pt;">Change the notes to this song (See if you can figure out the beats): CCGGAAG&nbsp;FFEEDDC</span></p>
+</li>
+</ol>
+</div>
+</div>
+</div>
+<p><span lang="EN"><span lang="EN"><a href="Combinational%20Logic.pdf" target="_blank" rel="noopener">&nbsp;</a></span></span></p>
+</div>
+</div>
+</body>
+</html>

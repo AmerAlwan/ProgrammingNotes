@@ -1,0 +1,109 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<head lang="en">
+<link href="TemplateFiles/stylesheet.css" type="text/css" rel="stylesheet" />
+<meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+<title>Sample Content Topic</title>
+</head>
+<body>
+<div id="container">
+<div id="decorative">&nbsp;&nbsp;</div>
+<div id="header">
+<div class="courseTitle">TEJ 3MI Grade&nbsp;11 Computer Engineering Technology</div>
+<h1 class="header">software engineering and game design</h1>
+<div id="d_content_r_c1">
+<div id="d_content_r_c2">
+<div id="d_content_r">
+<div id="d_content_r_p"><form method="post" action="https://wcdsb.elearningontario.ca/d2l/lms/quizzing/user/attempt/quiz_attempt_page.d2l?ou=8475732&amp;isprv=1&amp;drc=0&amp;impcf=&amp;pg=1&amp;qi=2550465&amp;ai=3734140&amp;dnb=0&amp;cfql=0&amp;d2l_body_type=1" id="d2l_form" enctype="multipart/form-data">
+<h2><span style="color: #000000; font-size: 18pt;">Getting Input and Responding on Screen</span></h2>
+<p><span style="font-size: 12pt; color: #000000;">For this part we are going to look at two very simple examples. The first, we are simply going to get a users name and then display that name. The second example will get two numbers from a user and then add those two numbers together.</span></p>
+<p><span style="font-size: 12pt; color: #000000;">We can keep what we have so far and simply add the following four GameObject's:</span></p>
+<ol>
+<li><span style="color: #000000; letter-spacing: 0.01rem; font-size: 12pt;">UI -&gt; Text</span></li>
+<li><span style="color: #000000; letter-spacing: 0.01rem; font-size: 12pt;">UI -&gt; Button</span></li>
+<li><span style="color: #000000; letter-spacing: 0.01rem; font-size: 12pt;">UI -&gt; InputField</span></li>
+<li><span style="color: #000000; letter-spacing: 0.01rem; font-size: 12pt;">Create Blank (rename to InputOutput)</span></li>
+</ol>
+<p><span style="font-size: 12pt; color: #000000;">These items may appear exactly where you expect them, or (like me) you may not see any of them on the screen, only in the hierarchy panel. If you need to, zoom out by using a scroll wheel. When you can see all of the items and the rectangular border organize the items to look something like this:</span></p>
+<p style="text-align: center;"><span style="font-size: 12pt; color: #000000;"><img src="pics1/setup1a.jpeg" alt="" title="" width="363" height="170" />&nbsp; <img src="pics1/setup1b.jpeg" alt="" title="" width="359" height="170" /></span></p>
+<p><span style="font-size: 12pt; color: #000000;">There are number of settings that can be changed for each element to make them look differently, but this would require a lot writing so please see the video tutorial at the end of example 1.</span></p>
+<p><span style="font-size: 12pt; color: #000000;">Let's move to the actual script. In the assets panel <strong>Right-Click -&gt; Create -&gt; C# Script</strong>. We will name our script UserInput. Double click the script icon to open MonoDevelop.</span></p>
+<p><span style="font-size: 12pt; color: #000000;">The first thing we will do is delete the void start and void update methods of code. We will then add the following line of code under the top line of code <strong>using UnityEngine;</strong>.</span></p>
+<p><span style="font-size: 12pt; color: #000000;">using UnityEngine.UI;</span></p>
+<p><span style="font-size: 12pt; color: #000000;">This line of code imports the predefined tools and functions that allow the User Input elements that we added in Unity, to work.</span></p>
+<p><span style="font-size: 12pt; color: #000000;">Now add the following two lines of code, and your program should look as follows:</span></p>
+<p><span style="font-size: 12pt; color: #000000;"><img src="pics1/InOutCode1.jpeg" alt="" title="" width="587" height="251" style="display: block; margin-left: auto; margin-right: auto;" /></span></p>
+<p><span style="font-size: 12pt; color: #000000;">We are now going to create something called a function. A function is a chunk of code that we can call on to use at any time. In our example here, it will be a chunk code that is used whenever we click our button. To create our function to print our text with the users name you will need to add three lines of code to look like the following:</span></p>
+<p><span style="font-size: 12pt; color: #000000;"><img src="pics1/OutputName.jpeg" alt="" title="" width="734" height="317" style="display: block; margin-left: auto; margin-right: auto;" /></span></p>
+<p><span style="font-size: 12pt; color: #000000;">So now we have our code (save now), but just like our very first example using the console, we still need to connect our code to elements in Unity. But what do we need to connect to? In this case, we need to link our script to our Button, our InputField, and our Text.</span></p>
+<p><span style="font-size: 12pt; color: #000000;">First, select your InputOutput object on the left (you will remember that this is our Blank Element). We are then going to drag our script into the Add Component area. This will open a series of fields that need to be filled. In our example, we have varName and txtOut. Drag the InputField into the varName box and drag the Text into the txtOut box. (the picture below is slightly different but hopefully you get the idea)</span></p>
+<p><span style="font-size: 12pt; color: #000000;"><img src="pics1/Blank%20Settings.jpeg" alt="" title="" style="max-width: 100%; display: block; margin-left: auto; margin-right: auto;" data-d2l-editor-default-img-style="true" /></span></p>
+<p><span style="font-size: 12pt; color: #000000;">Next select the button and scroll down in the inspector to find the Button (script) section and look for the empty box that says On Click(). It should show List is Empty.</span></p>
+<p><span style="font-size: 12pt; color: #000000;"><img src="pics1/AddToButton.jpeg" alt="" title="" style="max-width: 100%; display: block; margin-left: auto; margin-right: auto;" data-d2l-editor-default-img-style="true" /></span></p>
+<p><span style="font-size: 12pt; color: #000000;">Click the + and where you see the word None drag our InputOutput object. This will allow the No Function drop down menu to be used. Open it and select UserInput (this is the name of our script) -&gt;changeText (the name of our function).</span></p>
+<p><span style="font-size: 12pt; color: #000000;">You are now ready to go. Press play and run the program to see what happens.</span></p>
+<p style="text-align: center;"><span style="font-size: 12pt; color: #000000;"><iframe width="560" height="315" src="https://www.youtube.com/embed/ksH73MqznLc?showinfo=0&amp;wmode=opaque&amp;rel=0" frameborder="0" allowfullscreen=""></iframe></span></p>
+<h2><span style="font-size: 14pt;">Using Input for a Purpose</span></h2>
+<p><span style="font-size: 12pt; color: #000000;">For our last example, we are going keep everything that we have so far; we are just going to add one additional input field and we will create a new script. I will assume you can add these two things and move on to the actual program. I will title my script UserAddition</span></p>
+<p><span style="font-size: 12pt; color: #000000;">Just like last time we are going to delete the start() and update() methods and we will add the code under the using UnityEngine; The code we will add is using <strong>UnityEngine.UI;</strong></span></p>
+<p><span style="font-size: 12pt; color: #000000;">Again, just like last time we will need to declare our input fields and our text object.</span></p>
+<p><span style="font-size: 12pt;"> </span></p>
+<p><span style="font-size: 12pt;"><img src="pics1/DeclareFields.png" alt="" title="" width="388" height="97" style="display: block; margin-left: auto; margin-right: auto;" /></span></p>
+<p><span style="font-size: 12pt; color: #000000;">Remember, when we are declaring these fields we are creating variables. However, unlike the last example where we worked with text, this time we will work with numbers. This means that we are going to need to convert the users input into a number format; in programming we refer to these as integers. (integers are whole numbers, reals are decimal numbers). In order to convert our input variables we are going to create two new variables to store our converted numbers.</span></p>
+<p><span style="font-size: 12pt;"><img src="pics1/DeclareVariables.png" alt="" title="" width="165" height="56" style="display: block; margin-left: auto; margin-right: auto;" /></span></p>
+<p><span style="font-size: 12pt; color: #000000;">Now we move on to the heart of our program, our main method. This method will do two things; first it will convert our numbers, second it will display our answer. In order to convert our input (which the computer views as text) into an integer value we use the command <strong>int.Parse</strong></span></p>
+<p><span style="font-size: 12pt; color: #000000;">Your final code should look something like this (although you may name things differently).</span></p>
+<p><span style="font-size: 12pt; color: #000000;"><img src="pics1/User%20Input%20Output.jpeg" alt="" title="" width="754" height="502" style="display: block; margin-left: auto; margin-right: auto;" /></span></p>
+<p><span style="color: #000000; font-size: 12pt;">The final thing that we need to do is connect our new script and its function to the elements in our Unity project.</span></p>
+<p><span style="font-size: 12pt; color: #000000;">Just like last time we will connect our script to our blank object, and then connect the input fields and text in the appropriate boxes. Finally we will connect our blank object to our button and then select the appropriate function from the drop-down menu.</span></p>
+<p><span style="font-size: 12pt; color: #000000;">Play your program to see if it works.</span></p>
+<p style="text-align: center;"><span style="color: #000000; font-size: 12pt;"><iframe width="560" height="315" src="https://www.youtube.com/embed/SiJqzfnFm4Y?showinfo=0&amp;wmode=opaque&amp;rel=0" frameborder="0" allowfullscreen=""></iframe></span></p>
+<p></p>
+<h2><span style="font-size: 24pt;">IMPORTING AND USING ASSETS</span></h2>
+<p><span style="color: #000000; font-size: 12pt;">For this lesson you will need to import some assets. You can select your own pictures if you would like, but the pictures used for this lesson can be downloaded&nbsp;<strong><a href="/content/enforced/10349406-BL_TE_TEJ3MI-01_776726_1718Sem1/Programming/pics1/check-mark.png?_&amp;d2lSessionVal=KmEIuYUIJOYPrmE3M0vvSLDJI&amp;ou=10349406" target="_blank" rel="noopener noreferrer" style="color: #000000;">HERE</a></strong>&nbsp;and&nbsp;<strong><a href="/content/enforced/10349406-BL_TE_TEJ3MI-01_776726_1718Sem1/Programming/pics1/x-mark.png?_&amp;d2lSessionVal=KmEIuYUIJOYPrmE3M0vvSLDJI&amp;ou=10349406" target="_blank" rel="noopener noreferrer" style="color: #000000;">HERE</a></strong><a href="/content/enforced/10349406-BL_TE_TEJ3MI-01_776726_1718Sem1/Programming/pics1/x-mark.png?_&amp;d2lSessionVal=KmEIuYUIJOYPrmE3M0vvSLDJI&amp;ou=10349406" target="_blank" rel="noopener noreferrer" style="color: #000000;"></a>.&nbsp;Note that the pictures files are format .png This means that they have no background. Although this file format is not necessary (you can use bmp, jpg, etc.) it is the best as the lack of background allows your pictures to more naturally blend into your Unity environment.</span></p>
+<p><span style="color: #000000; font-size: 12pt;">For this example start by bringing in a text object and an input field. Then right click in the assets field and select "import new asset".</span></p>
+<p><span style="color: #000000; font-size: 12pt;"><img src="/content/enforced/10349406-BL_TE_TEJ3MI-01_776726_1718Sem1/Programming/pics1/Import.png?_&amp;d2lSessionVal=KmEIuYUIJOYPrmE3M0vvSLDJI&amp;ou=10349406" alt="" title="" width="490" height="469" /></span></p>
+<p><span style="color: #000000; font-size: 12pt;">Once you have selected the two pictures they will appear in the assets window. Drag each of the pictures into Hierarchy window.</span></p>
+<p><span style="color: #000000; font-size: 12pt;"><img src="/content/enforced/10349406-BL_TE_TEJ3MI-01_776726_1718Sem1/Programming/pics1/Hiearchy.png?_&amp;d2lSessionVal=KmEIuYUIJOYPrmE3M0vvSLDJI&amp;ou=10349406" alt="" title="" data-d2l-editor-default-img-style="true" style="max-width: 100%;" /></span></p>
+<p><span style="color: #000000; font-size: 12pt;">These elements can now be added to the Unity environment (note, that the specific pictures used in this example are very small and will need to be resized). However, if you play the current scene you will notice that the pictures that you have added to not actually show up. This is because they are not in the camera view. Select the camera from the hierarchy window and then resize and move it to fit the scene. You will see a small window in the bottom right corner of the scene show you what the camera sees.</span></p>
+<p><span style="color: #000000; font-size: 12pt;"><img src="/content/enforced/10349406-BL_TE_TEJ3MI-01_776726_1718Sem1/Programming/pics1/CameraChange.png?_&amp;d2lSessionVal=KmEIuYUIJOYPrmE3M0vvSLDJI&amp;ou=10349406" alt="" title="" width="652" height="306" /></span></p>
+<p><span style="color: #000000; font-size: 12pt;">We now have our scene setup so that we can use all of the elements we have brought in.</span></p>
+<p><span style="color: #000000; font-size: 12pt;">Create a new C# Script and open MonoDevelop. We will start this script the same way as always by adding the UnityEngine.UI; and by declaring our game objects. However, when we declare our two pictures we need to declare them as "GameObject".</span></p>
+<p><span style="color: #000000; font-size: 12pt;"><img src="/content/enforced/10349406-BL_TE_TEJ3MI-01_776726_1718Sem1/Programming/pics1/AssetScript1.png?_&amp;d2lSessionVal=KmEIuYUIJOYPrmE3M0vvSLDJI&amp;ou=10349406" alt="" title="" width="553" height="341" /></span></p>
+<p><span style="color: #000000; font-size: 12pt;">You should have noticed that the type of declaration we provide for our game object affects what we can do with it. Since we want to make these pictures invisible and then visible, we need to give them the property of GameObject.</span></p>
+<p><span style="color: #000000; font-size: 12pt;">Next, we are going to use our Start() function. We have not used this function before so I will take a moment to explain it. The Start() function is a default function that automatically runs when the scene that contains the script starts. However, the Start() function only runs once. This means that it is ideal for setting up the properties of our scene and to get everything looking and acting the way that we want at the beginning of a scene/game without relying on the user to provide some form of input.</span></p>
+<p><span style="color: #000000; font-size: 12pt;">In the Start() function we are going to make our two pictures and our input field invisible. Not only invisible but completely unusable. This is different from just adjusting the visual properties as by using the method we are going to use (&nbsp;<strong>SetActive(False)</strong>&nbsp;) even if the user were to click on the area where the object is, the computer would not recognize it. Use the following code to set our objects as inactive.</span></p>
+<p><span style="color: #000000; font-size: 12pt;"><img src="/content/enforced/10349406-BL_TE_TEJ3MI-01_776726_1718Sem1/Programming/pics1/AssetScript2.png?_&amp;d2lSessionVal=KmEIuYUIJOYPrmE3M0vvSLDJI&amp;ou=10349406" alt="" title="" width="588" height="164" /></span></p>
+<p><span style="color: #000000; font-size: 12pt;">The first two object, our pictures are pretty straight forward, however you might have noticed something about our input field. What we have done is temporarily set its property to gameObject so that we can use the GameObject features. You can use this process for anything that we bring into a scene.</span></p>
+<p><span style="color: #000000; font-size: 12pt;">Next we are going to use the Update() function with a key press event to make our game elements appear. We will start by making our input field appear.</span></p>
+<p><span style="color: #000000; font-size: 12pt;"><img src="/content/enforced/10349406-BL_TE_TEJ3MI-01_776726_1718Sem1/Programming/pics1/AssetScript3.png?_&amp;d2lSessionVal=KmEIuYUIJOYPrmE3M0vvSLDJI&amp;ou=10349406" alt="" title="" width="613" height="166" /></span></p>
+<p><span style="color: #000000; font-size: 12pt;">All that we have done here is taken our input field and changed its active state from false to true. Now would be a good time to test this script and make sure things are working. (Don't forget to connect your script to an empty game object and then connect your input field, text object, and your two pictures to the script). All that should happen is that you hit the Enter/Return button on your keyboard and the input field should appear on the screen.</span></p>
+<p><span style="color: #000000; font-size: 12pt;">The next thing we will do is make our X appear on the screen. As you probably already realize, we just use the same process as we did with the input field.</span></p>
+<p><span style="color: #000000; font-size: 12pt;"><img src="/content/enforced/10349406-BL_TE_TEJ3MI-01_776726_1718Sem1/Programming/pics1/AssetScript4.png?_&amp;d2lSessionVal=KmEIuYUIJOYPrmE3M0vvSLDJI&amp;ou=10349406" alt="" title="" width="487" height="99" /></span></p>
+<p><span style="color: #000000; font-size: 12pt;">Test your code to make sure it works and you should see the X appear when you press the up arrow. This is all pretty simple and straight forward, however, what if want something to appear and disappear? You may have already experimented with this in the previous lesson, but now will quickly look at the GetKeyDown and GetKeyUp options. Use the following code to control the check mark.</span></p>
+<p><span style="color: #000000; font-size: 12pt;"><img src="/content/enforced/10349406-BL_TE_TEJ3MI-01_776726_1718Sem1/Programming/pics1/AssetScript5.png?_&amp;d2lSessionVal=KmEIuYUIJOYPrmE3M0vvSLDJI&amp;ou=10349406" alt="" title="" width="525" height="179" /></span></p>
+<p><span style="color: #000000; font-size: 12pt;">Test your code and you should find that when you press down the down arrow, the check mark appears, but when you release the key, the check mark disappears.</span></p>
+<p><span style="color: #000000; font-size: 12pt;">That is all there is to it. Remember, that you can set things as active or inactive in any manner you wish, you do not have to use key press events. You can use command buttons, you can use functions, or you can even use timers (which we will get into later). I mention that as it is important to keep using the processes we have covered so far and remember that all of these things can work together.</span></p>
+<p></p>
+<p></p>
+<p style="text-align: center;"><iframe width="560" height="315" src="https://www.youtube.com/embed/QWyf533ZU68?showinfo=0&amp;rel=0&amp;wmode=opaque" frameborder="0" allowfullscreen=""></iframe></p>
+<h2><span style="font-size: 18pt; color: #000000;">Exercises</span></h2>
+<ul>
+<li><span style="font-size: 12pt; color: #000000;">Create a program that will allow a user to enter their name, their favorite colour, and favorite school subject.</span> <span style="color: #000000; font-size: 12pt; letter-spacing: 0.01rem;">Use a button to</span><span style="color: #000000; font-size: 12pt; letter-spacing: 0.01rem;">&nbsp;output this information including a single graphic to represent one of their choices (colour, subject) in the following format:</span></li>
+</ul>
+<p style="padding-left: 30px;"><span style="font-size: 12pt; color: #000000;">Hello _________ your favorite colour is _________ and your favorite subject is ___________.</span></p>
+<ul>
+<li><span style="color: #000000; font-size: 12pt;">It is time to make your first game. You are going to create a rock-paper-scissors simulator. Find three pictures (one for rock, one for paper, one for scissors) and import them as assets. Develop the game so that you play against the computer to see who wins. Remember, rock beats scissors, scissors beats paper, and paper beats rock. Include a scoring system (two numbers on the screen) to keep track of who wins two out of three times. Don't forget to use functions as this will actually help keep your code more efficient and organized.</span></li>
+</ul>
+<p><span style="color: #000000; font-size: 12pt;"></span></p>
+<p></p>
+<p></p>
+</form></div>
+</div>
+</div>
+</div>
+<p><br /><span lang="EN-US" style="font-size: 14pt;"></span></p>
+</div>
+</div>
+</body>
+</html>

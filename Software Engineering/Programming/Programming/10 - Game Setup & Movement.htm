@@ -1,0 +1,74 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<head lang="en">
+<link href="TemplateFiles/stylesheet.css" type="text/css" rel="stylesheet" />
+<meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+<title>Sample Content Topic</title>
+</head>
+<body>
+<div id="container">
+<div id="decorative">&nbsp;&nbsp;</div>
+<div id="header">
+<div class="courseTitle"><span style="color: #000000;">TEJ 3MI Grade&nbsp;11 Computer Engineering Technology</span></div>
+<h1 class="header">software engineering and game design</h1>
+<div id="d_content_r_c1">
+<div id="d_content_r_c2">
+<div id="d_content_r">
+<div id="d_content_r_p"><form method="post" action="https://wcdsb.elearningontario.ca/d2l/lms/quizzing/user/attempt/quiz_attempt_page.d2l?ou=8475732&amp;isprv=1&amp;drc=0&amp;impcf=&amp;pg=1&amp;qi=2550465&amp;ai=3734140&amp;dnb=0&amp;cfql=0&amp;d2l_body_type=1" id="d2l_form" enctype="multipart/form-data">
+<h2>game setup &amp; movement</h2>
+<p><span style="color: #000000; font-size: 12pt;">In this lesson we are going to start the process of making something more interesting and interactive. We are going to place assets on the screen, control with the keyboard, and cause interactions between the two objects.</span></p>
+<h3><span style="font-size: 24pt;">Setup</span></h3>
+<p><span style="color: #000000; font-size: 12pt;">The setup is really important as there are number of new elements that we are going to add. Begin by adding three objects to the unity environment (for this lesson I have used three boxes; <a href="Pics2/GoodGuy.png" target="_self">GoodGuy</a>, <a href="Pics2/BadGuy.png" target="_self">BadGuy</a>, and <a href="Pics2/ground.png" target="_self">Ground</a>. Feel free to use these or find your own (but remember that you would be best to use .png files. I created these using MS Paint.). If you use the boxes I have provided, adjust the scale of the GoodGuy and BadGuy boxes by 3, and manually adjust the Ground to fit the screen similar to below.</span></p>
+<p><img src="Pics2/SetUp1.PNG" alt="" title="" style="max-width: 100%;" data-d2l-editor-default-img-style="true" /></p>
+<p><span style="color: #000000; font-size: 12pt;">Next, for each of the three boxes, look to the <em>Inspector</em> window and at the bottom <em>Add Component</em>. In the search bar at the top type "box" and then from the drop-down menu select "Box Collider 2D". This will create a new component in your Inspector window. Be sure that none of the boxes are checked. You can select "Edit Collider" to adjust the size of the area that is affected, this becomes very important for objects that are not square or round. I discuss these details in the video tutorial. Make sure you add the collider for all three boxes.</span></p>
+<p><img src="Pics2/BoxCollider2D.PNG" alt="" title="" style="max-width: 100%;" data-d2l-editor-default-img-style="true" /></p>
+<p><span style="color: #000000; font-size: 12pt;">Next, for our GoodGuy and BadGuy boxes we are going to add a new component. In the <em>Inspector</em> window select <em>Add Component</em>. In the search bar at the top type "rigid" and then from the drop-down menu select "Rigidbody 2D". This will create a new component in your Inspector window. Be sure to check select <em>Freeze Rotation Z</em>.</span></p>
+<p><img src="Pics2/Rigidbody2D.PNG" alt="" title="" style="max-width: 100%;" data-d2l-editor-default-img-style="true" /></p>
+<p><span style="font-size: 12pt; color: #000000;">Lastly we need to add a "Tag" to our GoodGuy and BadGuy objects. At the top of the inspector select the <em>Tag</em> drop-down menu (it is likely defaulted to Untagged) and select "Add Tag..." Then create two new tag names; for this example I have created the tags GoodGuy and BadGuy.</span></p>
+<p><img src="Pics2/AddTag.PNG" alt="" title="" style="max-width: 100%;" data-d2l-editor-default-img-style="true" /></p>
+<h3><span style="font-size: 24pt;"></span></h3>
+<h2>Move the Enemy</h2>
+<p><span style="font-size: 12pt; color: #000000;">The last thing that we are going to look at is moving our BadGuy object. Right now our enemy just sits there, which is not very interesting or realistic, so let's apply some generic movement so that our enemy "attacks" us. As always there are several ways to do this, but we will keep it simple by creating a new C# script. Create the script and change its name to EnemyScript. We will start by creating three variables, one for the speed of the object, one to declare the object, and the last variable will set a stopping point.</span></p>
+<p><img src="Pics2/EnemyVariables.PNG" alt="" title="" style="max-width: 100%;" data-d2l-editor-default-img-style="true" /></p>
+<p><span style="font-size: 12pt; color: #000000;">Next we will use our start function to simply bring our enemy object into existence.</span></p>
+<p><img src="Pics2/EnemyStart.PNG" alt="" title="" style="max-width: 100%;" data-d2l-editor-default-img-style="true" /></p>
+<p><span style="font-size: 12pt; color: #000000;">Finally, in our Update() function will to create an if statement telling our enemy object to move toward our ending point.</span></p>
+<p><img src="Pics2/EnemyUpdate.PNG" alt="" title="" style="max-width: 100%;" data-d2l-editor-default-img-style="true" /></p>
+<p><span style="font-size: 12pt; color: #000000;">And that is all there is. The enemy will now move towards that ending point and will always try to get back there if it moved.</span></p>
+<h2><span style="font-size: 18pt; color: #000000;">An easier way?</span></h2>
+<p><span style="font-size: 12pt; color: #000000;">The above method will work very well and in many instances might be the best way. However, there is a potential problem. When setting a Vector position you are not able to use decimals. This means that the placement of our objects on the screen need to be placed based on specific coordinates that will not disrupt the position the object is moving towards rather than what will look best or work with the design of the game that we are trying to create. If our coordinates are not exact, our moving object will end up floating in the air, or burying itself in the ground. In order to get around this we just need to make a few changes to our code.</span></p>
+<p><span style="font-size: 12pt; color: #000000;">We start by creating a new variable and setting our old variable aside:</span></p>
+<p><span style="font-size: 12pt;"><img src="pics3/newVariable.PNG" alt="" title="" style="max-width: 100%;" data-d2l-editor-default-img-style="true" /></span></p>
+<p><span style="font-size: 12pt;">You will notice that this new variable does not declare a specific set of coordinates. This is because we are going to update the values in our variable continually as the program runs.</span></p>
+<p><span style="font-size: 12pt; color: #000000;">From here we will move to our <strong>Update()</strong> section and change our <em>if</em> statement a bit.</span></p>
+<p><img src="pics3/newUpdate.PNG" alt="" title="" style="max-width: 100%;" data-d2l-editor-default-img-style="true" /></p>
+<p><span style="font-size: 12pt; color: #000000;">So what is happening here? First, we are updating our <strong>leftEnd</strong> variable every time a new frame is run. This update though, only changes one thing, the <strong>Y-Coordinate</strong>. We do this so that we do not run into any issues with our object finishing or moving to a position that not is exactly on the ground. This means our object can move freely and be affected by gravity or other physics in a more natural way.</span></p>
+<p><span style="font-size: 12pt; color: #000000;">Next, the if statement simply moves towards a numeric value as opposed to coordinates. This value could be a variable if you wanted, but either way, it is just a lot easier to work with a single coordinate, in this case the X-Coordinate. As a side note, this example shows how to work with specifically the x, y, or z coordinates.</span></p>
+<p><span style="font-size: 12pt; color: #000000;">Finally, our transform.position value is virtually identical to before we have just changed the second value from leftStop to our new variable leftEnd.</span></p>
+<h2>Which One Then?</h2>
+<p><span style="font-size: 12pt; color: #000000;">Both methods are valid but you need to know when to use them. If you have a situation where you want some thing to move to a specific coordinate (maybe a game in space) then the first method would make the most sense. However, if you are creating a game (like an old-school platformer) then you generally do not want to mess with anything other than the x-coordinate, so the second method would be the way to go.</span></p>
+<p><span style="font-size: 12pt; color: #000000;">Ultimately both will work and it is up to you to decide what is easiest and most efficient for your program.</span></p>
+<p><span style="font-size: 12pt; color: #000000;"></span></p>
+<p><span style="font-size: 12pt; color: #000000;"><iframe width="560" height="315" src="https://www.youtube.com/embed/SY1ecLbdLok?wmode=opaque&amp;rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen=""></iframe></span></p>
+<h2><span style="font-size: 24pt;">Exercises</span></h2>
+<ol>
+<li><span style="font-size: 12pt; color: #000000;">Using our example program expand on it so that the enemy will move back and forth on the screen without falling off of the platform.</span></li>
+<li><span style="font-size: 12pt; color: #000000;">Expanding on the above exercise, make it so that the enemy moves back and forth and the good guy jumps over the bad guy every time it passes.</span></li>
+<ul>
+<li><span style="font-size: 12pt; color: #000000;">ALTERNATIVE: Make is so that the good guy does not move, but the enemy jumps over the good guy each time it passes.</span></li>
+</ul>
+</ol>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+</form></div>
+</div>
+</div>
+</div>
+<p><br /><span lang="EN-US" style="font-size: 14pt;"></span></p>
+</div>
+</div>
+</body>
+</html>

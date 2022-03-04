@@ -1,0 +1,73 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<head lang="en">
+<link href="TemplateFiles/stylesheet.css" type="text/css" rel="stylesheet" />
+<meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+<title>Sample Content Topic</title>
+</head>
+<body>
+<div id="container">
+<div id="decorative">&nbsp;&nbsp;</div>
+<div id="header">
+<div class="courseTitle"><span style="color: #000000;">TEJ 3MI Grade&nbsp;11 Computer Engineering Technology</span></div>
+<h1 class="header">software engineering and game design</h1>
+<div id="d_content_r_c1">
+<div id="d_content_r_c2">
+<div id="d_content_r">
+<div id="d_content_r_p"><form method="post" action="https://wcdsb.elearningontario.ca/d2l/lms/quizzing/user/attempt/quiz_attempt_page.d2l?ou=8475732&amp;isprv=1&amp;drc=0&amp;impcf=&amp;pg=1&amp;qi=2550465&amp;ai=3734140&amp;dnb=0&amp;cfql=0&amp;d2l_body_type=1" id="d2l_form" enctype="multipart/form-data">
+<h2>collisions</h2>
+<p><span style="color: #000000; font-size: 12pt;">In this lesson we are going to start the process of making something more interesting and interactive. We are going to place assets on the screen, control with the keyboard, and cause interactions between the two objects. We will continue from the example in our previous lesson with the two boxes and the ground. <strong>NOTE</strong>: You may want to start fresh or make a copy of the previous exercise so that you can keep it for reference. Here are the three objects again if you need them.&nbsp;<a href="Pics2/BadGuy.png" target="_self">BadGuy.png</a>,&nbsp;<a href="Pics2/GoodGuy.png" target="_self">GoodGuy.png</a>, and&nbsp;<a href="Pics2/ground.png" target="_self">ground.png</a>. Also, you could remove the script from the enemy object and create a brand new script to work from. It's up to you.</span></p>
+<h3><span style="font-size: 24pt;">Scripting</span></h3>
+<p><span style="font-size: 12pt; color: #000000;">Create a new script from the Assets window and open Mono-Develop. We will start by creating our one and only variable for this program.</span></p>
+<p><img src="Pics2/moveSpeed.PNG" alt="" title="" style="max-width: 100%;" data-d2l-editor-default-img-style="true" /></p>
+<p><span style="font-size: 12pt; color: #000000;">This variable is used to set the speed at which our object will move. I have set it as a float so that there can be very specific variation in the speed without any issues.</span></p>
+<p><span style="font-size: 12pt; color: #000000;">Next we are going to setup our key press movements. However, since our key presses are based on controlling the direction of an object, the setup for our key presses is a little different than in the past. We will still set our key press events in the Update() function.</span></p>
+<p><img src="Pics2/Update.PNG" alt="" title="" style="max-width: 100%;" data-d2l-editor-default-img-style="true" /></p>
+<p><span style="color: #000000; font-size: 12pt;">The first line of code creates a variable "move" which identifies the default key press events. For "Horizontal" the defaults are the left arrow, right arrow, A, and D. for "Vertical" the defaults are the up arrow, down arrow, W, and S. The 0 at the end deals with the Z-axis which is not needed as we are working in a 2D environment.</span></p>
+<p><span style="color: #000000; font-size: 12pt;">The second line of code uses the built-in method transform.position to cause the object to actually move.</span></p>
+<p><span style="color: #000000; font-size: 12pt;">The next thing that we need to look at are three Unity functions that deal with the collision of objects. OnCollisionEnter2D(), OnCollisionStay2D(), and OnCollisionExit2D().</span></p>
+<h3>OnCollisionenter2D()</h3>
+<p><span style="font-size: 12pt; color: #000000;">This function is automatically called when a collision occurs; however it is only called at the instance of the collision. In the example code you will notice a few things. First, in the parenthesis is the text <strong>Collision2D</strong>. This simply applies the method that is being called, in this case a collision of 2D objects. The second bit of text is "hit". This is simply a variable name, you can chose any name or keyword that you wish.</span></p>
+<p><span style="font-size: 12pt; color: #000000;">The next thing that you will notice is the if statement. All that this is saying is if the game object hit (which is the object that the script is attached to) enters the same space as the game object with the tag BadGuy, then do something. In this example, I have simply printed to the console window the text "Hello".</span></p>
+<p><img src="Pics2/Enter2D.PNG" alt="" title="" style="max-width: 100%;" data-d2l-editor-default-img-style="true" /></p>
+<p><span style="font-size: 12pt; color: #000000;">Copy the code and then return to the unity environment to attach the script. For example we will attach it to our GoodGuy object. Try running the script and see if your console prints Hello.</span></p>
+<h3>OnCollisionstay2D()</h3>
+<p><span style="font-size: 12pt; color: #000000;">This function is called automatically when a collision is occurring and will continue to be called until the collision ends. The structure of the function and the if statement are setup the exact same way as the previous function just with a change in the output to the console.</span></p>
+<p><img src="Pics2/Stay2D.PNG" alt="" title="" style="max-width: 100%;" data-d2l-editor-default-img-style="true" /></p>
+<p><span style="font-size: 12pt; color: #000000;">Copy the code and then return to the unity environment to test it.</span></p>
+<h3>oncollisionexit2d()</h3>
+<p><span style="font-size: 12pt; color: #000000;">Lastly, this function is called automatically when a collision ends; this means that two objects have hit each other and then moved apart.&nbsp;The structure of the function and the if statement are setup the exact same way as the previous function just with a change in the output to the console.</span></p>
+<p><img src="Pics2/Exit2D.PNG" alt="" title="" style="max-width: 100%;" data-d2l-editor-default-img-style="true" /></p>
+<p><span style="font-size: 12pt; color: #000000;">Copy the code and then return to the unity environment to test it.</span></p>
+<h2><span style="font-size: 24pt;">Adding Interactions</span></h2>
+<p><span style="font-size: 12pt; color: #000000;">Collisions are great, and unity does a lot of the work for us. However, there still is not much going on in our example. So let's add a few additional elements to make things a little more interesting, and to give you something a little more realistic to work with.</span></p>
+<h3>destroy()</h3>
+<p><span style="font-size: 12pt; color: #000000;">We will start with something pretty simple and that is the <em><strong>Destroy</strong> </em>command. This build in function will destroy any object it is called to; which means that the object will be completely eliminated from our game during play. Copy the code below into the OnCollisionEnter2D function.</span></p>
+<p><img src="Pics2/Destroy.PNG" alt="" title="" style="max-width: 100%;" data-d2l-editor-default-img-style="true" /></p>
+<p><span style="color: #000000; font-size: 12pt;">Go back into unity to test your code. You should find that when your GoodGuy object comes in contact with the BadGuy object, the BadGuy disappears. This is a very simple command that can be used in a wide variety of ways.</span></p>
+<h3>addforce()</h3>
+<p><span style="font-size: 12pt; color: #000000;">When we want to have an actual impact on an object we are fortunate to have the AddForce(). However, there are some additional steps that need to be taken to make the function work. Copy and review the code below.</span></p>
+<p><img src="Pics2/AddForce.PNG" alt="" title="" style="max-width: 100%;" data-d2l-editor-default-img-style="true" /></p>
+<p><span style="font-size: 12pt; color: #000000;">There appears to be a lot going on in this new line of code, but only real important thing that you need to be away of for now is the very last section in parenthesis, (new Vector2(1,1) * 400.0f). All that this code is saying is that when force is applied to the object getting hit, move it in 2D space (as opposed to 3D) on an angle of x=1 and y=1 multiplied for 400. This force can be changed very easily by adjusting the angle values or the force of impact. You should not though, that if you hit an object once, and then hit it again before it has recovered from the first attack, the values will increase exponentially.</span></p>
+<p><span style="font-size: 12pt; color: #000000;"></span></p>
+<p><span style="font-size: 12pt; color: #000000;"><iframe width="560" height="315" src="https://www.youtube.com/embed/viUa6Vc81y4?wmode=opaque&amp;rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen=""></iframe></span></p>
+<p><span style="font-size: 12pt; color: #000000;"></span></p>
+<h2><span style="font-size: 24pt;">Exercises</span></h2>
+<ol>
+<li><span style="font-size: 12pt; color: #000000;">Using our example program, alter it so that a point is gained and displayed on the screen after each hit.</span></li>
+<li><span style="font-size: 12pt; color: #000000;">Using our example program, alter is so that there are "walls" on either end so that neither player can leave the screen. Also add a second platform that your player can jump to. Finally, if you are using "Add Force" make sure that the enemy being hit can be hit in both directions. Finally, put all of this together to create a simple game where the enemy moves back and forth on the ground and you need to avoid it. If you are hit three times, the game ends. Be sure to display the hits on the screen.</span></li>
+</ol>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+</form></div>
+</div>
+</div>
+</div>
+<p><br /><span lang="EN-US" style="font-size: 14pt;"></span></p>
+</div>
+</div>
+</body>
+</html>

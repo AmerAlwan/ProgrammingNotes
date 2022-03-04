@@ -1,0 +1,51 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<head lang="en">
+<link href="TemplateFiles/stylesheet.css" type="text/css" rel="stylesheet" />
+<meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+<title>Sample Content Topic</title>
+</head>
+<body>
+<div id="container">
+<div id="decorative">&nbsp;&nbsp;</div>
+<div id="header">
+<div class="courseTitle">TEJ 3MI Grade&nbsp;11 Computer Engineering Technology</div>
+<h1 class="header">software engineering and game design</h1>
+<div id="d_content_r_c1">
+<div id="d_content_r_c2">
+<div id="d_content_r">
+<div id="d_content_r_p"><form method="post" action="https://wcdsb.elearningontario.ca/d2l/lms/quizzing/user/attempt/quiz_attempt_page.d2l?ou=8475732&amp;isprv=1&amp;drc=0&amp;impcf=&amp;pg=1&amp;qi=2550465&amp;ai=3734140&amp;dnb=0&amp;cfql=0&amp;d2l_body_type=1" id="d2l_form" enctype="multipart/form-data">
+<h2>timers and scenes</h2>
+<p><span style="font-size: 12pt; color: #000000;">Let's start this lesson is a very basic example of an extremely useful tool. Let's create a timer for our game. We will simply add a text element to our scene (feel free to change the font as you see fit) and then use a script to cause it to count down.</span></p>
+<p><span style="font-size: 12pt; color: #000000;">Don't forget to start your script by adding the using UnityEngine.UI;</span></p>
+<p><span style="font-size: 12pt; color: #000000;">From here we will create three variables:</span></p>
+<p><img src="pics3/time1.PNG" alt="" title="" width="616" height="83" /></p>
+<p><span style="font-size: 12pt; color: #000000;">You will notice that we have two variables for our timer. The first variable is a float, which is necessary as the countdown will occur based on screen rate, not actual time. This means that the time will be presented as a very long decimal value. The second variable is a rounded value for the time so that the user sees what appears to be a normal countdown clock. It is important that we keep the float variable because if we were just to use a rounded value we would lose 1/2 seconds repeatedly. We will also start by assigning a value of 10 to our timer variable as this is what we will count down from.</span></p>
+<p><img src="pics3/time2.PNG" alt="" title="" width="249" height="75" /></p>
+<p><span style="font-size: 12pt; color: #000000;">Next we will use our update function to subtract time with our counter and then if there is time left, we will update the text object to display the new time. When the time runs out our text object will indicate that and then change to a Game Over scene.</span></p>
+<p><img src="pics3/time3.PNG" alt="" title="" width="490" height="242" /></p>
+<p><span style="font-size: 12pt; color: #000000;">You will notice that if there is time left we move to a new function. This is so that we do not mess up the timing in any way. The function is as follows.</span></p>
+<p><img src="pics3/time4.PNG" alt="" title="" width="627" height="138" /></p>
+<p><span style="font-size: 12pt; color: #000000;">You can now debug your code. Assuming everything is good, attach you script to an empty game object and connect the text. Save your scene. Run the program and you will see a countdown.</span></p>
+<h2><span style="font-size: 24pt; color: #000000;">New Scene</span></h2>
+<p><span style="font-size: 12pt; color: #000000;">Now that we have the basics working, let's add on our game over scene. This is actually a very simple process. First, go to File --&gt; New Scene Then add a text object and replace the text with Game Over. Save the scene, for our example I will use the name End</span></p>
+<p><span style="font-size: 12pt; color: #000000;">In the script we need to add one line of code at the top in order to utilize the scene manager:</span></p>
+<p><img src="pics3/time5.PNG" alt="" title="" width="584" height="82" /></p>
+<p><span style="font-size: 12pt; color: #000000;">Then, in our if statement that is checking the time, we are going to change our simple game over text with the code to change the scene.</span></p>
+<p><img src="pics3/time6.PNG" alt="" title="" width="591" height="120" /></p>
+<p><span style="font-size: 12pt; color: #000000;">Debug your code and&nbsp;return to the Unity editor.</span></p>
+<p><span style="font-size: 12pt; color: #000000;">Go to File --&gt; Build Settings. Then click on "Add Open Scenes". It will add the scene that is open, then in Unity open each scene and add it until all scenes are included.</span></p>
+<p><span style="font-size: 12pt; color: #000000;">Test your code.</span></p>
+<p><span style="font-size: 12pt; color: #000000;"><iframe width="560" height="315" src="https://www.youtube.com/embed/-4Cn-WFfgG8?wmode=opaque&amp;rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen=""></iframe></span></p>
+<h2><span style="font-size: 24pt; color: #000000;">Exercises</span></h2>
+<p><span style="font-size: 12pt; color: #000000;">Create a simple program that causes an object to be moved on the screen by key controls. It will collide with another object on the screen and open a new scene. In the new scene continue to use the same character to collide with something which then returns to the first scene.&nbsp;</span></p>
+<p></p>
+</form></div>
+</div>
+</div>
+</div>
+<p><br /><span lang="EN-US" style="font-size: 14pt;"></span></p>
+</div>
+</div>
+</body>
+</html>

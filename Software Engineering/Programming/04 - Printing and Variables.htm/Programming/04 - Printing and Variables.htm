@@ -1,0 +1,81 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<head lang="en">
+<link href="TemplateFiles/stylesheet.css" type="text/css" rel="stylesheet" />
+<meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+<title>Sample Content Topic</title>
+</head>
+<body>
+<div id="container">
+<div id="decorative">&nbsp;&nbsp;</div>
+<div id="header">
+<div class="courseTitle">TEJ 3MI Grade&nbsp;11 Computer Engineering Technology</div>
+<h1 class="header">software engineering and game design</h1>
+<div id="d_content_r_c1">
+<div id="d_content_r_c2">
+<div id="d_content_r">
+<div id="d_content_r_p"><form method="post" action="https://wcdsb.elearningontario.ca/d2l/lms/quizzing/user/attempt/quiz_attempt_page.d2l?ou=8475732&amp;isprv=1&amp;drc=0&amp;impcf=&amp;pg=1&amp;qi=2550465&amp;ai=3734140&amp;dnb=0&amp;cfql=0&amp;d2l_body_type=1" id="d2l_form" enctype="multipart/form-data">
+<h2>printing and user input</h2>
+<h3><span style="font-size: 14pt;"><strong><span style="color: #cf2a27;">FIRST</span></strong></span></h3>
+<p><span style="color: #000000; font-size: 12pt;">In Windows - Select Edit -&gt; Preferences -&gt; External Tools -&gt; MonoDevelop</span></p>
+<p><span style="color: #000000; font-size: 12pt;">In Mac - Select Unity -&gt; Preferences -&gt; External Tools -&gt; MonoDevelop</span></p>
+<p><span style="color: #000000; font-size: 12pt;">Your will find a brief video tutorial going everything explained at the end of each example.</span></p>
+<h2><span style="color: #000000; font-size: 14pt;">Printing to the Console</span></h2>
+<p><span style="color: #000000; font-size: 12pt;">Printing the console is an extremely useful tool. Because you cannot always see where a program might have an error, adding in comments to be printed in the console can allow you to narrow down and hopefully pinpoint the error.</span></p>
+<p><span style="color: #000000; font-size: 12pt;">Start by going to "<strong>GameObject</strong>" menu at the top and select "<strong>Create Empty</strong>". This will add something called <strong>GameObject</strong> in the hierarchy menu on the left. Technically you can name this element anything that you want as it will never be seen by the user (it is blank). However, there are good naming conventions are important and objects should be named something relevant to their purpose and the name should start with a capital and if there are multiple words, their should be no spaces and each word should be capitalized. For example, ThisIsMyObject.</span></p>
+<p><span style="color: #000000; font-size: 12pt;">For the purpose of this program I will name my object MyOutput.</span></p>
+<p><span style="color: #000000; font-size: 12pt;">The next thing we should do (if you do not do it right at the start) is save the current scene. A scene is what the player sees and can be a single screen or an entire 3D world. To save the scene simply go to <strong>File -&gt; Save Scene As</strong> &nbsp;For this example I will save my scene as MyScene. This should create an icon in your assets panel.</span></p>
+<p><span style="color: #000000; font-size: 12pt;">Lastly, we need to create our script. To do this, Right Click in the assets panel which will open a drop down menu. Select<strong> Create -&gt; C# Script</strong>. This will create a script icon in your assets panel that we will rename ConsoleOutput.</span></p>
+<p><span style="color: #000000; font-size: 12pt;">We are now setup and your screen should look like this:</span></p>
+<p><span style="color: #000000; font-size: 12pt;"><img src="pics1/program1%20setup.jpeg" alt="" title="" width="755" height="412" style="display: block; margin-left: auto; margin-right: auto;" /></span></p>
+<p><span style="color: #000000; font-size: 12pt;">Double-Click the script icon and wait for MonoDevelop to open.</span></p>
+<p><span style="color: #000000; font-size: 12pt;"><img src="pics1/BlankProgram.jpeg" alt="" title="" width="795" height="321" style="display: block; margin-left: auto; margin-right: auto;" /></span></p>
+<p><span style="color: #000000; font-size: 12pt;">The only thing that we are going to add is the code <strong>print ("Hello World");</strong> inside the start method. Now save your script (<strong>File -&gt; Save</strong>) and return to Unity. Make sure that you console is open (selected) and press play.&nbsp;Did something happen? Probably not. This is because in order for a script to be run it must be connected to an object in Unity. To do this, select your MyOutput object in the hierarchy pane, open the <strong>Project</strong> tab at the bottom, and then drag your C# Script over to the right into the inspector. This should cause a blue line to appear just above the "Add Component" button. Release the script and you should see this in the console:</span></p>
+<p><span style="color: #000000; font-size: 12pt;"><img src="pics1/ScriptImport.jpeg" alt="" title="" style="display: block; margin-left: auto; margin-right: auto;" width="410" height="271" /></span></p>
+<p><span style="color: #000000; font-size: 12pt;">Now let's open the console and hit play again. This is what you should see in the console as output:</span></p>
+<p><span style="color: #000000; font-size: 12pt;"><img src="pics1/HelloOutput.jpeg" alt="" title="" width="537" height="210" style="display: block; margin-left: auto; margin-right: auto;" /></span></p>
+<p><span style="color: #000000; font-size: 12pt;">This is all that I need to show you for now about the console, as everything else that we will look at can also be used in the console if needed.</span></p>
+<p style="text-align: center;"><span style="color: #000000; font-size: 12pt;"><iframe width="560" height="315" src="https://www.youtube.com/embed/Z2nTQ6K1Kng?showinfo=0&amp;wmode=opaque&amp;rel=0" frameborder="0" allowfullscreen=""></iframe></span></p>
+<h2>variables</h2>
+<p><span style="font-size: 12pt; color: #000000;"></span></p>
+<p><span style="font-size: 12pt; color: #000000;">A variable is a very important concept in programming. Think of a variable as an empty box. We create that box and then we place a piece of information inside it. You should note here, that a variable can only hold one piece of information. This means that if we want to change the value of a variable, we will lose the original value of that variable.</span></p>
+<p><span style="font-size: 12pt; color: #000000;">Generally speaking, we will need to use three types of variables:</span></p>
+<ul>
+<li><strong><span style="color: #000000;">string: this is to hold words and letters</span></strong></li>
+<li><strong><span style="color: #000000;">int: this is to hold whole numbers</span></strong></li>
+<li><strong><span style="color: #000000;">double: this will hold decimal numbers</span></strong></li>
+</ul>
+<p><span style="font-size: 12pt;"><img src="Pics2/varType.PNG" alt="" title="" width="299" height="104" /></span></p>
+<p><span style="font-size: 12pt; color: #000000;">When we want to print a variable we just need to place it inside the brackets or we "add" it to a string.</span></p>
+<p><span style="font-size: 12pt; color: #000000;"></span></p>
+<p><span style="color: #000000; font-size: 12pt;"><img src="Pics2/varPrint.PNG" alt="" title="" width="315" height="30" /></span></p>
+<p><span style="color: #000000; font-size: 12pt;">We can also complete math inside our print statements.</span></p>
+<p><span style="color: #000000; font-size: 12pt;"><img src="Pics2/varPrint2.PNG" alt="" title="" width="795" height="23" /></span></p>
+<h2><span style="font-size: 18pt; color: #000000;">Exercises</span></h2>
+<ul>
+<li><span style="font-size: 12pt; color: #000000;">Create a program that will&nbsp;use variables for name, favorite colour, and favorite school subject.</span> <span style="color: #000000; font-size: 12pt; letter-spacing: 0.01rem;">Then output this information</span><span style="color: #000000; font-size: 12pt; letter-spacing: 0.01rem;">&nbsp;in the following format:</span></li>
+</ul>
+<p style="padding-left: 30px;"><span style="font-size: 12pt; color: #000000;">Hello _________ your favorite colour is _________ and your favorite subject is ___________.</span></p>
+<ul>
+<li><span style="font-size: 12pt; color: #000000;">Create a program that will&nbsp;use variables for name and age. The computer will then output their name, age, and the year they were born. <span style="color: #000000; font-size: 12pt; letter-spacing: 0.01rem;">Then output this information</span><span style="color: #000000; font-size: 12pt; letter-spacing: 0.01rem;">&nbsp;in the following format</span>:</span></li>
+</ul>
+<p style="padding-left: 30px;"><span style="font-size: 12pt; color: #000000;">Hello __________, you are ____ years old, which means that you were born in the year _______.</span></p>
+<ul>
+<li><span style="color: #000000; font-size: 12pt;">Create a program that uses three variables to hold three numbers. Then use a fourth variable to hold the answer and then print the result for each of the following simple equations. NOTE: these should all be printed in a single program.</span></li>
+<ul>
+<li><span style="color: #000000; font-size: 12pt;">var1 + var2 + var3</span></li>
+<li><span style="color: #000000; font-size: 12pt;">var2 * var2 / var1</span></li>
+<li><span style="color: #000000; font-size: 12pt;">var3 + var2 * var1 * var2</span></li>
+</ul>
+</ul>
+<p><span color="#000000" style="color: #000000;"><span style="font-size: 16px;">&nbsp;</span></span></p>
+<p><span color="#000000" style="color: #000000;"><span style="font-size: 16px;"></span></span></p>
+</form></div>
+</div>
+</div>
+</div>
+<p><span lang="EN-US" style="font-size: 14pt;"></span></p>
+</div>
+</div>
+</body>
+</html>

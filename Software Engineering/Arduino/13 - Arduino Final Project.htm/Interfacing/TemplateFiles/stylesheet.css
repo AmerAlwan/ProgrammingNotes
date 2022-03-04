@@ -1,0 +1,345 @@
+/*Desire2Learn Inc.*/
+/*Notepaper Template*/
+/*November 2010*/
+
+/* Layout elements */
+
+html { 
+	background-color: #fff;
+	padding: 10px;
+	background-image: url('bg.jpg');
+}
+  
+#container {
+	margin-bottom: 0;
+	padding: 13px 32px;
+}
+
+#decorative{
+	margin: 0;
+	padding: 10px;
+	background-image: url('top_runner.png');
+	background-repeat: repeat-x;
+}
+
+#header{
+	margin-top: -10px;
+	margin-bottom: -17px;
+	padding: 20px 0 0 20px;
+	background-image:url('bg.png');
+}
+
+#body{
+	margin: 0px;
+	margin-bottom: -12px;
+	padding: 20px;
+	background-image: url('bg.png');
+}
+
+.img{
+	margin: 6px 0 16px 0;
+	padding: 0;
+}
+
+.imgRight{
+	margin: 6px 0 16px 0;
+	padding: 0;
+	float: right;
+	padding-left: 26px;
+}
+
+.imgLeft{
+	margin: 6px 0 16px 0;
+	padding: 0px;
+	float: left;
+	padding-right: 26px;
+}
+
+#footer{
+	clear: both; 
+	margin: 0px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	text-align: center;
+	background-image:url('bg.png');
+}
+
+#footnotes{
+	background-color: #EFE6CF;
+	background-image: url('bg.png');
+	padding: 20px;
+	clear: both; 
+	margin-left: 0;
+	font-size: 0.92em;
+}
+
+.footnote{
+	border-top: 1px dashed #9EB39A;
+	border-bottom: 1px dashed #9EB39A;
+	padding: 2px 0 5px 20px;
+	font-size: 0.92em;
+}
+
+/* Text elements */
+
+body { 
+	font-family: Verdana, sans-serif;
+	font-size: 0.8em;
+	margin: 0 auto; 
+	padding: 0; 
+	text-align: left;
+}
+
+h1 {
+	margin-top: 0;
+	margin-bottom: 16px;
+	text-align: left;
+	text-indent: 0;
+	word-spacing: 0.125em;
+	font-family: Courier New, Georgia, serif;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 2.53em;
+	color: #3F3F3F;
+	letter-spacing: 0;
+	text-decoration: none;
+	text-transform: uppercase;
+}
+	
+h2 {
+	margin-top: 32px;
+	margin-bottom: 16px;
+	text-align: left;
+	text-indent: 0pt;
+	word-spacing: 0.125em;
+	font-family: Courier New, Georgia, serif;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 1.85em;
+	color: #3F3F3F;
+	letter-spacing: 0;
+	text-decoration: none;
+	border-bottom: 2px dotted #9EB39A;
+	text-transform: uppercase;
+	clear: both;
+}
+	   
+h3 {
+	margin-top: 32px;
+	margin-bottom: 8px;
+	text-align: left;
+	word-spacing: 0.125em;
+	font-family: Courier New, Georgia, serif;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 1.5em;
+	color: #3F3F3F;
+	letter-spacing: 0;
+	text-decoration: none;
+	text-transform: uppercase;
+	clear: both;
+}
+
+h4 {
+	margin-top: 24px;
+	margin-bottom: 8px;
+	text-align: left;
+	word-spacing: 0.250em;
+    font-family: Verdana, sans-serif; 
+	font-style: bold;
+	font-weight: bold;
+	font-size: 1em;
+	color: #3F3F3F;
+	letter-spacing: 0;
+	text-decoration: none;
+	text-transform: uppercase;
+	clear: both;
+}
+
+code{
+	font-size: 9pt;
+}
+
+strong {
+	word-spacing: 0;
+	font-family: Arial, sans-serif;
+	font-weight: bold;
+}
+
+em {
+	font-style: italic;
+	font-weight: normal;
+	font-family: Georgia, serif;
+}
+
+a:link { 
+	color: #8D3818;
+	border-bottom: 1px solid #8D3818;
+	text-decoration: none;
+}
+		
+a:visited { 
+	color: #8D3818;
+	border-bottom: 1px solid #8D3818;
+	text-decoration: none; 
+}
+		   
+a:hover { 
+	color: #fff; 
+	background-color: #9EB39A;
+	border-bottom: 0px solid #2AADCE;
+	text-decoration: none;
+}
+
+a:active { 
+	color: #fff; 
+	background-color: #9EB39A;
+	border-bottom: 0px solid #2AADCE;
+	text-decoration: none; 
+}
+
+blockquote {
+	margin: 22px 40px;
+	upadding: 3px;
+	color: #000;
+	font-style: italic;
+	padding: 5px 50px;
+	background: transparent url("blockquote.png") no-repeat 0 0;
+}
+
+p {   
+	text-indent: 0; 
+	margin-top: 8px; 
+	margin-bottom: 16px;  
+	line-height: 22px;
+	font-style: normal; 
+	font-weight: normal; 
+	text-decoration: none; 
+}
+
+p.emphasis{
+	background: transparent url("emphasis_bg.png");
+}
+
+p.caption {
+	margin: 0;
+	padding: 0;
+	font-size: 0.95em;
+	clear: both;
+}
+		
+p.note {
+	text-align: left;
+	text-indent: 0;
+	padding: 8px;
+	background: transparent url("note_bg.png");
+	font-size: 1em;
+	text-decoration: none;
+	line-height: 19px;
+	border: 1px dashed #ABBEA6;
+}
+
+img { 
+	border: none;
+}
+
+/* Lists */
+
+ul {
+	text-align: left;
+	font-size: 1em;
+	list-style-type: circle;
+	list-style-position: outside;
+    padding-bottom: 5px;
+}
+
+ol {
+	text-align: left;
+	font-size: 1em;
+	list-style-position: outside;
+	padding-bottom: 5px;
+}
+	
+li {
+	margin: 6px 0;
+}
+
+dl {
+	text-align: left;
+	font-size: 1em;
+    padding: 2px 0 13px 26px;
+}
+
+dt {
+
+	margin: 0 0 0 0;
+	padding: 0 0 0 0;
+	font-weight: bold;
+}
+
+dd {
+
+	margin: 0 0 10px 0;
+	padding: 0 0 0 0;
+}
+
+/* Spans */
+
+span.new { 
+	font-family: Arial, sans-serif;
+	font-size: 0.85em; 
+	color: #51694E; 
+	letter-spacing: 0; 
+	font-style: bold; 
+	font-weight: bold; 
+	text-decoration: none;
+}
+
+span.note { 
+	word-spacing: 0.250em;
+    font-family: Verdana, sans-serif; 
+	font-style: bold;
+	font-weight: bold;
+	font-size: 1em;
+	color: #8D3818;
+	letter-spacing: 0;
+	text-decoration: none;
+	text-transform: uppercase;
+}
+
+/* Tables */
+
+table {
+	margin: 6px 0 12px 0;
+	width: 100%;
+	border-collapse: collapse;
+	border-bottom: 1px solid #666;
+}
+
+th {
+	background-color: #baaea3;
+	font-weight: bold;
+	vertical-align: top;
+	border: 1px solid #888888;
+	padding: 5px;
+	font-size: 1em;
+	color: #000;
+}
+
+
+td {
+	border-collapse: collapse;
+	padding: 5px;
+	vertical-align: top;
+	border: 1px solid #888888;
+	font-size: 1em;
+	color: #30302f;
+	width: auto;
+}
+
+tr {
+	border-collapse: collapse;
+	padding: 5px;
+	margin: 0;
+	vertical-align: top;
+}
